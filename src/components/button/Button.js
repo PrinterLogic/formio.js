@@ -61,8 +61,37 @@ export default class ButtonComponent extends Field {
     };
   }
 
+<<<<<<< HEAD
   set loading(loading) {
     this.setLoading(this.refs.button, loading);
+=======
+  set success(success) {
+    this.setSuccess(this.buttonElement, success);
+  }
+
+  setSuccess(element, success) {
+    element.success = success;
+
+    if (!element.successIcon && success) {
+      element.successIcon = this.ce('i', {
+        class: `${this.iconClass('ok')} button-icon-right`
+      });
+    }
+
+    if (element.successIcon) {
+      if (success) {
+        this.appendTo(element.successIcon, element);
+      }
+      else {
+        this.removeChildFrom(element.successIcon, element);
+      }
+    }
+  }
+
+  set disabled(disabled) {
+    super.disabled = disabled;
+    this.setDisabled(this.buttonElement, disabled);
+>>>>>>> FOR-1262:  edit button success
   }
 
   // No label needed for buttons.
@@ -112,19 +141,30 @@ export default class ButtonComponent extends Field {
     if (this.component.action === 'submit') {
       this.on('submitButton', () => {
         this.loading = true;
+        this.success = false;
         this.disabled = true;
       }, true);
       this.on('submitDone', () => {
-        this.loading = false;
+        this.loading  = false;
+        this.success = true;
         this.disabled = false;
+<<<<<<< HEAD
         this.addClass(this.refs.button, 'btn-success submit-success');
         this.removeClass(this.refs.button, 'btn-danger submit-fail');
         this.addClass(this.refs.buttonMessageContainer, 'has-success');
         this.removeClass(this.refs.buttonMessageContainer, 'has-error');
         this.setContent(this.refs.buttonMessage, this.t('complete'));
+=======
+        this.empty(message);
+        this.addClass(this.buttonElement, 'btn-success');
+        this.addClass(message, 'has-success');
+        this.removeClass(message, 'has-error');
+        this.append(message);
+>>>>>>> FOR-1262:  edit button success
       }, true);
       this.on('submitError', () => {
         this.loading = false;
+<<<<<<< HEAD
         this.disabled = false;
         this.removeClass(this.refs.button, 'btn-success submit-success');
         this.addClass(this.refs.button, 'btn-danger submit-fail');
@@ -135,12 +175,19 @@ export default class ButtonComponent extends Field {
       onChange = (value, isValid) => {
         this.removeClass(this.refs.button, 'btn-success submit-success');
         this.removeClass(this.refs.button, 'btn-danger submit-fail');
+=======
+        this.success = false;
+        const isValid = this.root.isValid(value.data, true);
+        this.disabled = this.options.readOnly || (this.component.disableOnInvalid && !isValid);
+        this.removeClass(this.buttonElement, 'btn-success');
+>>>>>>> FOR-1262:  edit button success
         if (isValid && this.hasError) {
           this.hasError = false;
           this.setContent(this.refs.buttonMessage, '');
           this.removeClass(this.refs.buttonMessageContainer, 'has-success');
           this.removeClass(this.refs.buttonMessageContainer, 'has-error');
         }
+<<<<<<< HEAD
       };
       onError = () => {
         this.hasError = true;
@@ -150,6 +197,20 @@ export default class ButtonComponent extends Field {
         this.addClass(this.refs.buttonMessageContainer, 'has-error');
         this.setContent(this.refs.buttonMessage, this.t(this.errorMessage('error')));
       };
+=======
+      }, true);
+      this.on('error', () => {
+        this.loading = false;
+        this.success = false;
+        this.hasError = true;
+        this.removeClass(this.buttonElement, 'btn-success');
+        this.empty(message);
+        this.removeClass(message, 'has-success');
+        this.addClass(message, 'has-error');
+        message.appendChild(this.buttonMessage(this.errorMessage('error')));
+        this.append(message);
+      }, true);
+>>>>>>> FOR-1262:  edit button success
     }
 
     if (this.component.action === 'url') {

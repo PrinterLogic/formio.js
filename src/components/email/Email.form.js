@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12,3 +13,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _default() {
   return _Base.default.apply(void 0, arguments);
 }
+=======
+import baseEditForm from '../textfield/TextField.form';
+import EmailEditFormDisplay from './editForm/Email.edit.display';
+import EmailEditFormValidation from './editForm/Email.edit.validation';
+
+export default function(...extend) {
+  return baseEditForm([
+    {
+      key: 'display',
+      components: EmailEditFormDisplay,
+    },
+    {
+      key: 'validation',
+      components: EmailEditFormValidation,
+    }
+  ], ...extend);
+}
+>>>>>>> newFormio

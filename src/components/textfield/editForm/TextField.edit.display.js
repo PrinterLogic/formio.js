@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15,6 +16,72 @@ var _default = [
     placeholder: 'Placeholder',
     tooltip: 'The placeholder text that will appear when this field is empty.'
   },
+=======
+import Widgets from '../../../widgets';
+import _ from 'lodash';
+export default [
+>>>>>>> newFormio
+  {
+    weight: 400,
+    type: 'select',
+    input: true,
+    key: 'widget.type',
+    label: 'Widget',
+    placeholder: 'Select a widget',
+    tooltip: 'The widget is the display UI used to input the value of the field.',
+    defaultValue: 'input',
+    onChange: (context) => {
+      context.data.widget = _.pick(context.data.widget, 'type');
+    },
+    dataSrc: 'values',
+    data: {
+      values: [
+        { label: 'Input Field', value: 'input' },
+        { label: 'Calendar Picker', value: 'calendar' },
+      ]
+    },
+    conditional: {
+      json: { '===': [{ var: 'data.type' }, 'textfield'] }
+    }
+  },
+  {
+    weight: 405,
+    type: 'textarea',
+    key: 'widget',
+    label: 'Widget Settings',
+    refreshOn: 'wiget.type',
+    clearOnHide: false,
+    // Deleted clearOnHide and refreshOn to make possible to change exist widget settings.
+    calculateValue: (context) => {
+      const { calculatedValue } = context.instance;
+      const { type } = context.data.widget;
+
+      if (
+        _.isEmpty(_.omit(context.data.widget, 'type')) ||
+        _.isEmpty(_.omit(calculatedValue, 'type'))
+      ) {
+        if (calculatedValue && !calculatedValue.type) {
+          return context.data.widget;
+        }
+
+        const existWidget = context.instance._currentForm.options.editComponent.widget;
+        if (existWidget && !_.isEmpty(_.omit(existWidget, 'type')) && type === existWidget.type) {
+          return _.omit(existWidget, 'language');
+        }
+        else if (type) {
+          return _.omit(Widgets[type].defaultSettings, 'language');
+        }
+      }
+      return context.data.widget;
+    },
+    input: true,
+    rows: 5,
+    editor: 'ace',
+    as: 'json',
+    conditional: {
+      json: { '!==': [{ var: 'data.widget.type' }, 'input'] }
+    }
+  },
   {
     weight: 410,
     type: 'textfield',
@@ -25,6 +92,24 @@ var _default = [
     customConditional(context) {
       return !context.data.allowMultipleMasks;
     }
+<<<<<<< HEAD
+=======
+  },
+  {
+    weight: 413,
+    type: 'checkbox',
+    input: true,
+    key: 'allowMultipleMasks',
+    label: 'Allow Multiple Masks'
+>>>>>>> newFormio
+  },
+  {
+    weight: 1350,
+    type: 'checkbox',
+    input: true,
+    key: 'spellcheck',
+    defaultValue: true,
+    label: 'Allow Spellcheck'
   },
   {
     weight: 417,
@@ -52,7 +137,12 @@ var _default = [
     ]
   },
   {
+<<<<<<< HEAD
     type: 'number',
+=======
+    weight: 320,
+    type: 'textfield',
+>>>>>>> newFormio
     input: true,
     key: 'rows',
     label: 'Rows',
@@ -60,5 +150,39 @@ var _default = [
     tooltip: 'This allows control over how many rows are visible in the text area.',
     placeholder: 'Enter the amount of rows'
   },
+<<<<<<< HEAD
+=======
+  {
+    weight: 330,
+    type: 'textfield',
+    input: true,
+    key: 'suffix',
+    label: 'Suffix'
+  },
+  {
+    weight: 1300,
+    type: 'checkbox',
+    label: 'Hide Input',
+    tooltip: 'Hide the input in the browser. This does not encrypt on the server. Do not use for passwords.',
+    key: 'mask',
+    input: true
+  },
+  {
+    weight: 1200,
+    type: 'checkbox',
+    label: 'Show Word Counter',
+    tooltip: 'Show a live count of the number of words.',
+    key: 'showWordCount',
+    input: true
+  },
+  {
+    weight: 1201,
+    type: 'checkbox',
+    label: 'Show Character Counter',
+    tooltip: 'Show a live count of the number of characters.',
+    key: 'showCharCount',
+    input: true
+  },
+>>>>>>> newFormio
 ];
 exports.default = _default;

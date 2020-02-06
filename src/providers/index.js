@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,3 +14,8 @@ Object.defineProperty(exports, "storage", {
 var _storage2 = _interopRequireDefault(require("./storage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+import Providers from './Providers';
+
+export default Providers;
+>>>>>>> newFormio

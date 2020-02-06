@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -58,6 +59,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+=======
+/* globals Stripe */
+import _ from 'lodash';
+import Validator from '../../../validator/Validator';
+import Component from '../../../components/_classes/component/Component';
+import Formio from '../../../Formio';
+import NativePromise from 'native-promise-only';
+>>>>>>> newFormio
 
 // Register a custom validor to use card validition from Stripe
 if (typeof _Validator.default.validators.stripe === 'undefined') {
@@ -89,6 +98,12 @@ if (typeof _Validator.default.validators.stripe === 'undefined') {
 /**
  * This is the StripeComponent class.
  */
+<<<<<<< HEAD
+=======
+export default class StripeComponent extends Component {
+  constructor(component, options, data) {
+    super(component, options, data);
+>>>>>>> newFormio
 
 
 var StripeComponent =
@@ -175,6 +190,7 @@ function (_BaseComponent) {
      * @param {Object} result - The result returned by Stripe API.
      */
 
+<<<<<<< HEAD
   }, {
     key: "authorizeDone",
     value: function authorizeDone(result) {
@@ -182,6 +198,11 @@ function (_BaseComponent) {
       this.removeClass(this.element, 'stripe-submitting');
       this.addClass(this.element, 'stripe-submitted');
       this.stripeSuccess.style.display = 'block';
+=======
+    const that = this;
+    return new NativePromise(((resolve, reject) => {
+      that.authorizePending();
+>>>>>>> newFormio
 
       if (this.component.stripe.payButton && this.component.stripe.payButton.enable) {
         this.stripeElementPayButton.style.display = 'none';

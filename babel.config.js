@@ -12,9 +12,15 @@ module.exports = {
     ],
   ],
   plugins: [
+<<<<<<< HEAD
     '@babel/plugin-proposal-export-default-from',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-class-properties',
     'babel-plugin-espower'
+=======
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-export-default-from',
+    '@babel/plugin-proposal-optional-chaining'
+>>>>>>> newFormio
   ],
 };

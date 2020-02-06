@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "_args": [
     [
       "formiojs@3.22.10",
@@ -79,6 +80,29 @@
     "two.js": "^0.7.0-beta.3",
     "vanilla-picker": "^2.8.1",
     "vanilla-text-mask": "^5.1.1"
+=======
+  "name": "formiojs",
+  "version": "",
+  "description": "Common js library for client side interaction with <form.io>",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formio/formio.js.git"
+  },
+  "contributors": [
+    {
+      "name": "Form.io Open Source Community",
+      "url": "https://github.com/formio/formio.js/graphs/contributors"
+    }
+  ],
+  "browser": {
+    "vm": false
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/formio/formio.js/issues"
+>>>>>>> newFormio
   },
   "description": "Common js library for client side interaction with <form.io>",
   "homepage": "https://github.com/formio/formio.js#readme",

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.array.concat");
@@ -23,3 +24,25 @@ function _default() {
     components: _ButtonEdit.default
   }]].concat(extend));
 }
+=======
+import baseEditForm from '../_classes/component/Component.form';
+
+import ButtonEditDisplay from './editForm/Button.edit.display';
+
+export default function(...extend) {
+  return baseEditForm([
+    {
+      key: 'display',
+      components: ButtonEditDisplay
+    },
+    {
+      key: 'data',
+      ignore: true,
+    },
+    {
+      key: 'validation',
+      ignore: true,
+    },
+  ], ...extend);
+}
+>>>>>>> newFormio

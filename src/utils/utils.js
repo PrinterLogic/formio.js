@@ -1,4 +1,25 @@
+<<<<<<< HEAD
 "use strict";
+=======
+/* global $ */
+
+import _ from 'lodash';
+import fetchPonyfill from 'fetch-ponyfill';
+import jsonLogic from 'json-logic-js';
+import moment from 'moment-timezone/moment-timezone';
+import jtz from 'jstimezonedetect';
+import { lodashOperators } from './jsonlogic/operators';
+import NativePromise from 'native-promise-only';
+import dompurify from 'dompurify';
+import { getValue } from './formUtils';
+import Evaluator from './Evaluator';
+const interpolate = Evaluator.interpolate;
+const { fetch } = fetchPonyfill({
+  Promise: NativePromise
+});
+
+export * from './formUtils';
+>>>>>>> newFormio
 
 require("core-js/modules/es.symbol");
 
@@ -189,6 +210,7 @@ Object.keys(_formUtils).forEach(function (key) {
   });
 });
 
+<<<<<<< HEAD
 var _stringHash = _interopRequireDefault(require("string-hash"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -233,6 +255,9 @@ _jsonLogicJs.default.add_operation('relativeMinDate', function (relativeMinDate)
 _jsonLogicJs.default.add_operation('relativeMaxDate', function (relativeMaxDate) {
   return (0, _momentTimezone.default)().add(relativeMaxDate, 'days').toISOString();
 });
+=======
+export { jsonLogic, moment };
+>>>>>>> newFormio
 
 /**
  * Evaluate a method.
@@ -260,14 +285,21 @@ function evaluate(func, args, ret, tokenize) {
     delete args.form;
   }
 
+<<<<<<< HEAD
   var componentKey = args.component.key;
+=======
+  const componentKey = component.key;
+>>>>>>> newFormio
 
   if (typeof func === 'string') {
     if (ret) {
       func += ";return ".concat(ret);
     }
+<<<<<<< HEAD
 
     var params = _lodash.default.keys(args);
+=======
+>>>>>>> newFormio
 
     if (tokenize) {
       // Replace all {{ }} references with actual data.
@@ -284,10 +316,18 @@ function evaluate(func, args, ret, tokenize) {
     }
 
     try {
+<<<<<<< HEAD
       func = _construct(Function, _toConsumableArray(params).concat([func]));
       args = _lodash.default.values(args);
     } catch (err) {
       console.warn("An error occured within the custom function for ".concat(componentKey), err);
+=======
+      func = Evaluator.evaluator(func, args);
+      args = _.values(args);
+    }
+    catch (err) {
+      console.warn(`An error occured within the custom function for ${componentKey}`, err);
+>>>>>>> newFormio
       returnVal = null;
       func = false;
     }
@@ -295,22 +335,40 @@ function evaluate(func, args, ret, tokenize) {
 
   if (typeof func === 'function') {
     try {
+<<<<<<< HEAD
       returnVal = Array.isArray(args) ? func.apply(void 0, _toConsumableArray(args)) : func(args);
     } catch (err) {
       returnVal = null;
       console.warn("An error occured within custom function for ".concat(componentKey), err);
+=======
+      returnVal = Evaluator.evaluate(func, args);
+    }
+    catch (err) {
+      returnVal = null;
+      console.warn(`An error occured within custom function for ${componentKey}`, err);
+>>>>>>> newFormio
     }
   } else if (_typeof(func) === 'object') {
     try {
       returnVal = _jsonLogicJs.default.apply(func, args);
     } catch (err) {
       returnVal = null;
+<<<<<<< HEAD
       console.warn("An error occured within custom function for ".concat(componentKey), err);
+=======
+      console.warn(`An error occured within custom function for ${componentKey}`, err);
+>>>>>>> newFormio
     }
   } else if (func) {
     console.warn("Unknown function type for ".concat(componentKey));
   }
+<<<<<<< HEAD
 
+=======
+  else if (func) {
+    console.warn(`Unknown function type for ${componentKey}`);
+  }
+>>>>>>> newFormio
   return returnVal;
 }
 /* eslint-enable max-statements */
@@ -373,10 +431,13 @@ function boolValue(value) {
  * @return {Array|{index: number, input: string}|Boolean|*}
  */
 
+<<<<<<< HEAD
 
 function isMongoId(text) {
   return text.toString().match(/^[0-9a-fA-F]{24}$/);
 }
+=======
+>>>>>>> newFormio
 /**
  * Checks the calculated value for a provided component and data.
  *
@@ -416,9 +477,16 @@ function checkSimpleConditional(component, condition, row, data) {
   var value = null;
 
   if (row) {
+<<<<<<< HEAD
     value = (0, _formUtils.getValue)({
       data: row
     }, condition.when);
+=======
+    value = getValue({ data: row }, condition.when);
+  }
+  if (data && _.isNil(value)) {
+    value = getValue({ data }, condition.when);
+>>>>>>> newFormio
   }
 
   if (data && _lodash.default.isNil(value)) {
@@ -432,6 +500,7 @@ function checkSimpleConditional(component, condition, row, data) {
     value = '';
   }
 
+<<<<<<< HEAD
   var eq = String(condition.eq);
   var show = String(condition.show); // Special check for selectboxes component.
 
@@ -440,11 +509,25 @@ function checkSimpleConditional(component, condition, row, data) {
   } // FOR-179 - Check for multiple values.
 
 
+=======
+  const eq = String(condition.eq);
+  const show = String(condition.show);
+
+  // Special check for selectboxes component.
+  if (_.isObject(value) && _.has(value, condition.eq)) {
+    return String(value[condition.eq]) === show;
+  }
+  // FOR-179 - Check for multiple values.
+>>>>>>> newFormio
   if (Array.isArray(value) && value.map(String).includes(eq)) {
     return show === 'true';
   }
 
+<<<<<<< HEAD
   return String(value) === eq === (show === 'true');
+=======
+  return (String(value) === eq) === (show === 'true');
+>>>>>>> newFormio
 }
 /**
  * Check custom javascript conditional.
@@ -461,6 +544,7 @@ function checkCustomConditional(component, custom, row, data, form, variable, on
   if (typeof custom === 'string') {
     custom = "var ".concat(variable, " = true; ").concat(custom, "; return ").concat(variable, ";");
   }
+<<<<<<< HEAD
 
   var value = instance && instance.evaluate ? instance.evaluate(custom) : evaluate(custom, {
     row: row,
@@ -468,6 +552,11 @@ function checkCustomConditional(component, custom, row, data, form, variable, on
     form: form
   });
 
+=======
+  const value = (instance && instance.evaluate) ?
+    instance.evaluate(custom) :
+    evaluate(custom, { row, data, form });
+>>>>>>> newFormio
   if (value === null) {
     return onError;
   }
@@ -477,11 +566,19 @@ function checkCustomConditional(component, custom, row, data, form, variable, on
 
 function checkJsonConditional(component, json, row, data, form, onError) {
   try {
+<<<<<<< HEAD
     return _jsonLogicJs.default.apply(json, {
       data: data,
       row: row,
       form: form,
       _: _lodash.default
+=======
+    return jsonLogic.apply(json, {
+      data,
+      row,
+      form,
+      _,
+>>>>>>> newFormio
     });
   } catch (err) {
     console.warn("An error occurred in jsonLogic advanced condition for ".concat(component.key), err);
@@ -505,12 +602,22 @@ function checkJsonConditional(component, json, row, data, form, onError) {
 function checkCondition(component, row, data, form, instance) {
   if (component.customConditional) {
     return checkCustomConditional(component, component.customConditional, row, data, form, 'show', true, instance);
+<<<<<<< HEAD
   } else if (component.conditional && component.conditional.when) {
     return checkSimpleConditional(component, component.conditional, row, data, true);
   } else if (component.conditional && component.conditional.json) {
     return checkJsonConditional(component, component.conditional.json, row, data, form, instance);
   } // Default to show.
 
+=======
+  }
+  else if (component.conditional && component.conditional.when) {
+    return checkSimpleConditional(component, component.conditional, row, data);
+  }
+  else if (component.conditional && component.conditional.json) {
+    return checkJsonConditional(component, component.conditional.json, row, data, form, true);
+  }
+>>>>>>> newFormio
 
   return true;
 }
@@ -541,6 +648,7 @@ function checkTrigger(component, trigger, row, data, form, instance) {
   return false;
 }
 
+<<<<<<< HEAD
 function setActionProperty(component, action, row, data, result, instance) {
   switch (action.property.type) {
     case 'boolean':
@@ -613,6 +721,45 @@ function interpolate(rawTemplate, data) {
       console.warn('Error interpolating template', err, rawTemplate, data);
     }
   }
+=======
+export function setActionProperty(component, action, result, row, data, instance) {
+  const property = action.property.value;
+
+  switch (action.property.type) {
+    case 'boolean': {
+      const currentValue = _.get(component, property, false).toString();
+      const newValue = action.state.toString();
+
+      if (currentValue !== newValue) {
+        _.set(component, property, newValue === 'true');
+      }
+
+      break;
+    }
+    case 'string': {
+      const evalData = {
+        data,
+        row,
+        component,
+        result,
+      };
+      const textValue = action.property.component ? action[action.property.component] : action.text;
+      const currentValue = _.get(component, property, '');
+      const newValue = (instance && instance.interpolate)
+        ? instance.interpolate(textValue, evalData)
+        : Evaluator.interpolate(textValue, evalData);
+
+      if (newValue !== currentValue) {
+        _.set(component, property, newValue);
+      }
+
+      break;
+    }
+  }
+
+  return component;
+}
+>>>>>>> newFormio
 
   return template;
 }
@@ -623,6 +770,7 @@ function interpolate(rawTemplate, data) {
  * @param evalContext
  * @returns {string}
  */
+<<<<<<< HEAD
 
 
 function uniqueName(name, template, evalContext) {
@@ -650,6 +798,36 @@ function guid() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0;
     var v = c === 'x' ? r : r & 0x3 | 0x8;
+=======
+export function uniqueName(name, template, evalContext) {
+  template = template || '{{fileName}}-{{guid}}';
+  //include guid in template anyway, to prevent overwriting issue if filename matches existing file
+  if (!template.includes('{{guid}}')) {
+    template = `${template}-{{guid}}`;
+  }
+  const parts = name.split('.');
+  let fileName = parts.slice(0, parts.length - 1).join('.');
+  const extension = parts.length > 1
+    ? `.${_.last(parts)}`
+    : '';
+  //allow only 100 characters from original name to avoid issues with filename length restrictions
+  fileName = fileName.substr(0, 100);
+  evalContext = Object.assign(evalContext || {}, {
+    fileName,
+    guid: guid()
+  });
+  //only letters, numbers, dots, dashes, underscores and spaces are allowed. Anything else will be replaced with dash
+  const uniqueName = `${Evaluator.interpolate(template, evalContext)}${extension}`.replace(/[^0-9a-zA-Z.\-_ ]/g, '-');
+  return uniqueName;
+}
+
+export function guid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    const r = Math.random()*16|0;
+    const v = c === 'x'
+      ? r
+      : (r&0x3|0x8);
+>>>>>>> newFormio
     return v.toString(16);
   });
 }
@@ -681,8 +859,12 @@ function getDateSetting(date) {
   dateSetting = null;
 
   try {
+<<<<<<< HEAD
     var value = new Function('moment', "return ".concat(date, ";"))(_momentTimezone.default);
 
+=======
+    const value = Evaluator.evaluator(`return ${date};`, 'moment')(moment);
+>>>>>>> newFormio
     if (typeof value === 'string') {
       dateSetting = (0, _momentTimezone.default)(value);
     } else if (typeof value.toDate === 'function') {
@@ -715,6 +897,183 @@ function isValidDate(date) {
  * @return {string}
  */
 
+<<<<<<< HEAD
+=======
+/**
+ * Get the current timezone string.
+ *
+ * @return {string}
+ */
+export function currentTimezone() {
+  if (moment.currentTimezone) {
+    return moment.currentTimezone;
+  }
+  moment.currentTimezone = jtz.determine().name();
+  return moment.currentTimezone;
+}
+
+/**
+ * Get an offset date provided a date object and timezone object.
+ *
+ * @param date
+ * @param timezone
+ * @return {Date}
+ */
+export function offsetDate(date, timezone) {
+  if (timezone === 'UTC') {
+    return {
+      date: new Date(date.getTime() + (date.getTimezoneOffset() * 60000)),
+      abbr: 'UTC'
+    };
+  }
+  const dateMoment = moment(date).tz(timezone);
+  return {
+    date: new Date(date.getTime() + ((dateMoment.utcOffset() + date.getTimezoneOffset()) * 60000)),
+    abbr: dateMoment.format('z')
+  };
+}
+
+/**
+ * Returns if the zones are loaded.
+ *
+ * @return {boolean}
+ */
+export function zonesLoaded() {
+  return moment.zonesLoaded;
+}
+
+/**
+ * Returns if we should load the zones.
+ *
+ * @param timezone
+ * @return {boolean}
+ */
+export function shouldLoadZones(timezone) {
+  if (timezone === currentTimezone() || timezone === 'UTC') {
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Externally load the timezone data.
+ *
+ * @return {Promise<any> | *}
+ */
+export function loadZones(timezone) {
+  if (timezone && !shouldLoadZones(timezone)) {
+    // Return non-resolving promise.
+    return new NativePromise(_.noop);
+  }
+
+  if (moment.zonesPromise) {
+    return moment.zonesPromise;
+  }
+  return moment.zonesPromise = fetch(
+    'https://cdn.form.io/moment-timezone/data/packed/latest.json',
+  ).then(resp => resp.json().then(zones => {
+    moment.tz.load(zones);
+    moment.zonesLoaded = true;
+
+    // Trigger a global event that the timezones have finished loading.
+    if (document && document.createEvent && document.body && document.body.dispatchEvent) {
+      var event = document.createEvent('Event');
+      event.initEvent('zonesLoaded', true, true);
+      document.body.dispatchEvent(event);
+    }
+  }));
+}
+
+/**
+ * Get the moment date object for translating dates with timezones.
+ *
+ * @param value
+ * @param format
+ * @param timezone
+ * @return {*}
+ */
+export function momentDate(value, format, timezone) {
+  const momentDate = moment(value);
+  if (timezone === 'UTC') {
+    timezone = 'Etc/UTC';
+  }
+  if ((timezone !== currentTimezone() || (format && format.match(/\s(z$|z\s)/))) && moment.zonesLoaded) {
+    return momentDate.tz(timezone);
+  }
+  return momentDate;
+}
+
+/**
+ * Format a date provided a value, format, and timezone object.
+ *
+ * @param value
+ * @param format
+ * @param timezone
+ * @return {string}
+ */
+export function formatDate(value, format, timezone) {
+  const momentDate = moment(value);
+  if (timezone === currentTimezone()) {
+    // See if our format contains a "z" timezone character.
+    if (format.match(/\s(z$|z\s)/)) {
+      loadZones();
+      if (moment.zonesLoaded) {
+        return momentDate.tz(timezone).format(convertFormatToMoment(format));
+      }
+      else {
+        return momentDate.format(convertFormatToMoment(format.replace(/\s(z$|z\s)/, '')));
+      }
+    }
+
+    // Return the standard format.
+    return momentDate.format(convertFormatToMoment(format));
+  }
+  if (timezone === 'UTC') {
+    const offset = offsetDate(momentDate.toDate(), 'UTC');
+    return `${moment(offset.date).format(convertFormatToMoment(format))} UTC`;
+  }
+
+  // Load the zones since we need timezone information.
+  loadZones();
+  if (moment.zonesLoaded) {
+    return momentDate.tz(timezone).format(`${convertFormatToMoment(format)} z`);
+  }
+  else {
+    return momentDate.format(convertFormatToMoment(format));
+  }
+}
+
+/**
+ * Pass a format function to format within a timezone.
+ *
+ * @param formatFn
+ * @param date
+ * @param format
+ * @param timezone
+ * @return {string}
+ */
+export function formatOffset(formatFn, date, format, timezone) {
+  if (timezone === currentTimezone()) {
+    return formatFn(date, format);
+  }
+  if (timezone === 'UTC') {
+    return `${formatFn(offsetDate(date, 'UTC').date, format)} UTC`;
+  }
+
+  // Load the zones since we need timezone information.
+  loadZones();
+  if (moment.zonesLoaded) {
+    const offset = offsetDate(date, timezone);
+    return `${formatFn(offset.date, format)} ${offset.abbr}`;
+  }
+  else {
+    return formatFn(date, format);
+  }
+}
+
+export function getLocaleDateFormatInfo(locale) {
+  const formatInfo = {};
+>>>>>>> newFormio
 
 function currentTimezone() {
   if (_momentTimezone.default.currentTimezone) {
@@ -834,16 +1193,35 @@ function momentDate(value, format, timezone) {
  * @param timezone
  * @return {string}
  */
+<<<<<<< HEAD
+=======
+export function convertFormatToFlatpickr(format) {
+  return format
+  // Remove the Z timezone offset, not supported by flatpickr.
+    .replace(/Z/g, '')
+
+    // Year conversion.
+    .replace(/y/g, 'Y')
+    .replace('YYYY', 'Y')
+    .replace('YY', 'y')
+>>>>>>> newFormio
 
 
+<<<<<<< HEAD
 function formatDate(value, format, timezone) {
   var momentDate = (0, _momentTimezone.default)(value);
+=======
+    // Day in month.
+    .replace(/d/g, 'j')
+    .replace(/jj/g, 'd')
+>>>>>>> newFormio
 
   if (timezone === currentTimezone()) {
     // See if our format contains a "z" timezone character.
     if (format.match(/\s(z$|z\s)/)) {
       loadZones();
 
+<<<<<<< HEAD
       if (_momentTimezone.default.zonesLoaded) {
         return momentDate.tz(timezone).format(convertFormatToMoment(format));
       } else {
@@ -898,6 +1276,14 @@ function formatOffset(formatFn, date, format, timezone) {
   } else {
     return formatFn(date, format);
   }
+=======
+    // Hours, minutes, seconds
+    .replace('HH', 'H')
+    .replace('hh', 'G')
+    .replace('mm', 'i')
+    .replace('ss', 'S')
+    .replace(/a/g, 'K');
+>>>>>>> newFormio
 }
 
 function getLocaleDateFormatInfo(locale) {
@@ -929,6 +1315,7 @@ function convertFormatToFlatpickr(format) {
  * @param format
  * @return {string}
  */
+<<<<<<< HEAD
 
 
 function convertFormatToMoment(format) {
@@ -937,6 +1324,34 @@ function convertFormatToMoment(format) {
   .replace(/d/g, 'D') // Day in week.
   .replace(/E/g, 'd') // AM/PM marker
   .replace(/a/g, 'A');
+=======
+export function convertFormatToMoment(format) {
+  return format
+  // Year conversion.
+    .replace(/y/g, 'Y')
+    // Day in month.
+    .replace(/d/g, 'D')
+    // Day in week.
+    .replace(/E/g, 'd')
+    // AM/PM marker
+    .replace(/a/g, 'A')
+    // Unix Timestamp
+    .replace(/U/g, 'X');
+}
+
+export function convertFormatToMask(format) {
+  return format
+  // Long month replacement.
+    .replace(/M{4}/g, 'MM')
+    // Initial short month conversion.
+    .replace(/M{3}/g, '***')
+    // Short month conversion if input as text.
+    .replace(/e/g, 'Q')
+    // Year conversion.
+    .replace(/[ydhmsHMG]/g, '9')
+    // AM/PM conversion.
+    .replace(/a/g, 'AA');
+>>>>>>> newFormio
 }
 
 function convertFormatToMask(format) {
@@ -982,6 +1397,7 @@ function getInputMask(mask) {
         break;
 
       default:
+        maskArray.numeric = false;
         maskArray.push(mask[i]);
         break;
     }
@@ -994,6 +1410,18 @@ function matchInputMask(value, inputMask) {
   if (!inputMask) {
     return true;
   }
+<<<<<<< HEAD
+=======
+
+  // If value is longer than mask, it isn't valid.
+  if (value.length > inputMask.length) {
+    return false;
+  }
+
+  for (let i = 0; i < inputMask.length; i++) {
+    const char = value[i];
+    const charPart = inputMask[i];
+>>>>>>> newFormio
 
   for (var i = 0; i < inputMask.length; i++) {
     var char = value[i];
@@ -1007,17 +1435,24 @@ function matchInputMask(value, inputMask) {
   return true;
 }
 
+<<<<<<< HEAD
 function getNumberSeparators() {
   var lang = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'en';
   var formattedNumberString = 12345.6789.toLocaleString(lang);
   var delimeters = formattedNumberString.match(/..(.)...(.)../);
 
+=======
+export function getNumberSeparators(lang = 'en') {
+  const formattedNumberString = (12345.6789).toLocaleString(lang);
+  const delimeters = formattedNumberString.match(/..(.)...(.)../);
+>>>>>>> newFormio
   if (!delimeters) {
     return {
       delimiter: ',',
       decimalSeparator: '.'
     };
   }
+<<<<<<< HEAD
 
   return {
     delimiter: delimeters.length > 1 ? delimeters[1] : ',',
@@ -1030,6 +1465,21 @@ function getNumberDecimalLimit(component) {
   var decimalLimit = 20;
 
   var step = _lodash.default.get(component, 'validate.step', 'any');
+=======
+  return {
+    delimiter: (delimeters.length > 1) ? delimeters[1] : ',',
+    decimalSeparator: (delimeters.length > 2) ? delimeters[2] : '.',
+  };
+}
+
+export function getNumberDecimalLimit(component, defaultLimit) {
+  if (_.has(component, 'decimalLimit')) {
+    return _.get(component, 'decimalLimit');
+  }
+  // Determine the decimal limit. Defaults to 20 but can be overridden by validate.step or decimalLimit settings.
+  let decimalLimit = defaultLimit || 20;
+  const step = _.get(component, 'validate.step', 'any');
+>>>>>>> newFormio
 
   if (step !== 'any') {
     var parts = step.toString().split('.');
@@ -1042,12 +1492,21 @@ function getNumberDecimalLimit(component) {
   return decimalLimit;
 }
 
+<<<<<<< HEAD
 function getCurrencyAffixes(_ref) {
   var _ref$currency = _ref.currency,
       currency = _ref$currency === void 0 ? 'USD' : _ref$currency,
       decimalLimit = _ref.decimalLimit,
       decimalSeparator = _ref.decimalSeparator,
       lang = _ref.lang;
+=======
+export function getCurrencyAffixes({
+   currency = 'USD',
+   decimalLimit,
+   decimalSeparator,
+   lang,
+ }) {
+>>>>>>> newFormio
   // Get the prefix and suffix from the localized string.
   var regex = '(.*)?100';
 
@@ -1122,6 +1581,10 @@ function fieldData(data, component) {
     return data[component.key];
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> newFormio
 /**
  * Delays function execution with possibility to execute function synchronously or cancel it.
  *
@@ -1129,6 +1592,7 @@ function fieldData(data, component) {
  * @param delay Delay time
  * @return {*}
  */
+<<<<<<< HEAD
 
 
 function delay(fn) {
@@ -1139,6 +1603,10 @@ function delay(fn) {
   }
 
   var timer = setTimeout.apply(void 0, [fn, delay].concat(args));
+=======
+export function delay(fn, delay = 0, ...args) {
+  const timer = setTimeout(fn, delay, ...args);
+>>>>>>> newFormio
 
   function cancel() {
     clearTimeout(timer);
@@ -1146,13 +1614,24 @@ function delay(fn) {
 
   function earlyCall() {
     cancel();
+<<<<<<< HEAD
     return fn.apply(void 0, args);
+=======
+    return fn(...args);
+>>>>>>> newFormio
   }
 
   earlyCall.timer = timer;
   earlyCall.cancel = cancel;
+<<<<<<< HEAD
   return earlyCall;
 }
+=======
+
+  return earlyCall;
+}
+
+>>>>>>> newFormio
 /**
  * Iterate the given key to make it unique.
  *
@@ -1162,6 +1641,7 @@ function delay(fn) {
  * @returns {String}
  *   The new component key.
  */
+<<<<<<< HEAD
 
 
 function iterateKey(key) {
@@ -1173,6 +1653,18 @@ function iterateKey(key) {
     return Number(suffix) + 1;
   });
 }
+=======
+export function iterateKey(key) {
+  if (!key.match(/(\d+)$/)) {
+    return `${key}1`;
+  }
+
+  return key.replace(/(\d+)$/, function(suffix) {
+    return Number(suffix) + 1;
+  });
+}
+
+>>>>>>> newFormio
 /**
  * Determines a unique key within a map provided the base key.
  *
@@ -1180,6 +1672,7 @@ function iterateKey(key) {
  * @param base
  * @return {*}
  */
+<<<<<<< HEAD
 
 
 function uniqueKey(map, base) {
@@ -1191,11 +1684,22 @@ function uniqueKey(map, base) {
 
   return newKey;
 }
+=======
+export function uniqueKey(map, base) {
+  let newKey = base;
+  while (map.hasOwnProperty(newKey)) {
+    newKey = iterateKey(newKey);
+  }
+  return newKey;
+}
+
+>>>>>>> newFormio
 /**
  * Determines the major version number of bootstrap.
  *
  * @return {number}
  */
+<<<<<<< HEAD
 
 
 function bootstrapVersion(options) {
@@ -1209,6 +1713,18 @@ function bootstrapVersion(options) {
 
   return 0;
 }
+=======
+export function bootstrapVersion(options) {
+  if (options.bootstrap) {
+    return options.bootstrap;
+  }
+  if ((typeof $ === 'function') && (typeof $().collapse === 'function')) {
+    return parseInt($.fn.collapse.Constructor.VERSION.split('.')[0], 10);
+  }
+  return 0;
+}
+
+>>>>>>> newFormio
 /**
  * Retrun provided argument.
  * If argument is a function, returns the result of a function call.
@@ -1216,26 +1732,42 @@ function bootstrapVersion(options) {
  *
  * @return {*}
  */
+<<<<<<< HEAD
 
 
 function unfold(e) {
+=======
+export function unfold(e) {
+>>>>>>> newFormio
   if (typeof e === 'function') {
     return e();
   }
 
   return e;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> newFormio
 /**
  * Map values through unfold and return first non-nil value.
  * @param {Array<T>} collection;
  *
  * @return {T}
  */
+<<<<<<< HEAD
 
 
 var firstNonNil = _lodash.default.flow([_lodash.default.partialRight(_lodash.default.map, unfold), _lodash.default.partialRight(_lodash.default.find, function (v) {
   return !_lodash.default.isUndefined(v);
 })]);
+=======
+export const firstNonNil = _.flow([
+  _.partialRight(_.map, unfold),
+  _.partialRight(_.find, v => !_.isUndefined(v))
+]);
+
+>>>>>>> newFormio
 /*
  * Create enclosed state.
  * Returns functions to getting and cycling between states.
@@ -1243,6 +1775,7 @@ var firstNonNil = _lodash.default.flow([_lodash.default.partialRight(_lodash.def
  * @param {*} b - next state.
  * @return {Functions[]} -- [get, toggle];
  */
+<<<<<<< HEAD
 
 
 exports.firstNonNil = firstNonNil;
@@ -1250,13 +1783,22 @@ exports.firstNonNil = firstNonNil;
 function withSwitch(a, b) {
   var state = a;
   var next = b;
+=======
+export function withSwitch(a, b) {
+  let state = a;
+  let next = b;
+>>>>>>> newFormio
 
   function get() {
     return state;
   }
 
   function toggle() {
+<<<<<<< HEAD
     var prev = state;
+=======
+    const prev = state;
+>>>>>>> newFormio
     state = next;
     next = prev;
   }
@@ -1264,6 +1806,7 @@ function withSwitch(a, b) {
   return [get, toggle];
 }
 
+<<<<<<< HEAD
 function observeOverload(callback) {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var _options$limit = options.limit,
@@ -1278,12 +1821,26 @@ function observeOverload(callback) {
   };
 
   return function () {
+=======
+export function observeOverload(callback, options = {}) {
+  const { limit = 50, delay = 500 } = options;
+  let callCount = 0;
+  let timeoutID = 0;
+
+  const reset = () => callCount = 0;
+
+  return () => {
+>>>>>>> newFormio
     if (timeoutID !== 0) {
       clearTimeout(timeoutID);
       timeoutID = 0;
     }
 
     timeoutID = setTimeout(reset, delay);
+<<<<<<< HEAD
+=======
+
+>>>>>>> newFormio
     callCount += 1;
 
     if (callCount >= limit) {
@@ -1292,4 +1849,89 @@ function observeOverload(callback) {
       return callback();
     }
   };
+<<<<<<< HEAD
 }
+=======
+}
+
+export function getContextComponents(context) {
+  const values = [];
+
+  context.utils.eachComponent(context.instance.options.editForm.components, (component, path) => {
+    if (component.key !== context.data.key) {
+      values.push({
+        label: `${component.label || component.key} (${path})`,
+        value: component.key,
+      });
+    }
+  });
+
+  return values;
+}
+
+/**
+ * Sanitize an html string.
+ *
+ * @param string
+ * @returns {*}
+ */
+export function sanitize(string, options) {
+  // Dompurify configuration
+  const sanitizeOptions = {
+    ADD_ATTR: ['ref', 'target'],
+    USE_PROFILES: { html: true }
+  };
+  // Add attrs
+  if (options.sanitizeConfig && Array.isArray(options.sanitizeConfig.addAttr) && options.sanitizeConfig.addAttr.length > 0) {
+    options.sanitizeConfig.addAttr.forEach((attr) => {
+      sanitizeOptions.ADD_ATTR.push(attr);
+    });
+  }
+  // Add tags
+  if (options.sanitizeConfig && Array.isArray(options.sanitizeConfig.addTags) && options.sanitizeConfig.addTags.length > 0) {
+    sanitizeOptions.ADD_TAGS = options.sanitizeConfig.addTags;
+  }
+  // Allow tags
+  if (options.sanitizeConfig && Array.isArray(options.sanitizeConfig.allowedTags) && options.sanitizeConfig.allowedTags.length > 0) {
+    sanitizeOptions.ALLOWED_TAGS = options.sanitizeConfig.allowedTags;
+  }
+  // Allow attributes
+  if (options.sanitizeConfig && Array.isArray(options.sanitizeConfig.allowedAttrs) && options.sanitizeConfig.allowedAttrs.length > 0) {
+    sanitizeOptions.ALLOWED_ATTR = options.sanitizeConfig.allowedAttrs;
+  }
+  // Allowd URI Regex
+  if (options.sanitizeConfig && options.sanitizeConfig.allowedUriRegex) {
+    sanitizeOptions.ALLOWED_URI_REGEXP = options.sanitizeConfig.allowedUriRegex;
+  }
+  return dompurify.sanitize(string, sanitizeOptions);
+}
+
+/**
+ * Fast cloneDeep for JSON objects only.
+ */
+export function fastCloneDeep(obj) {
+  return obj ? JSON.parse(JSON.stringify(obj)) : obj;
+}
+
+export { Evaluator, interpolate };
+
+export function isInputComponent(componentJson) {
+  if (componentJson.input === false || componentJson.input === true) {
+    return componentJson.input;
+  }
+  switch (componentJson.type) {
+    case 'htmlelement':
+    case 'content':
+    case 'columns':
+    case 'fieldset':
+    case 'panel':
+    case 'table':
+    case 'tabs':
+    case 'well':
+    case 'button':
+      return false;
+    default:
+      return true;
+  }
+}
+>>>>>>> newFormio

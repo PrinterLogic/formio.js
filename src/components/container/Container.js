@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -7,9 +8,52 @@ require("core-js/modules/es.symbol.description");
 require("core-js/modules/es.symbol.iterator");
 
 require("core-js/modules/es.array.concat");
+=======
+import _ from 'lodash';
+import NestedDataComponent from '../_classes/nesteddata/NestedDataComponent';
+
+export default class ContainerComponent extends NestedDataComponent {
+  static schema(...extend) {
+    return NestedDataComponent.schema({
+      label: 'Container',
+      type: 'container',
+      key: 'container',
+      clearOnHide: true,
+      input: true,
+      tree: true,
+      hideLabel: true,
+      components: []
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Container',
+      icon: 'folder-open',
+      group: 'data',
+      documentation: 'http://help.form.io/userguide/#container',
+      weight: 10,
+      schema: ContainerComponent.schema()
+    };
+  }
+
+  constructor(...args) {
+    super(...args);
+    this.type = 'container';
+  }
+
+  addComponents(data, options) {
+    return super.addComponents(this.dataValue, options);
+  }
+
+  get defaultSchema() {
+    return ContainerComponent.schema();
+  }
+>>>>>>> newFormio
 
 require("core-js/modules/es.array.iterator");
 
+<<<<<<< HEAD
 require("core-js/modules/es.object.get-own-property-descriptor");
 
 require("core-js/modules/es.object.get-prototype-of");
@@ -186,3 +230,33 @@ function (_NestedComponent) {
 }(_NestedComponent2.default);
 
 exports.default = ContainerComponent;
+=======
+  get templateName() {
+    return 'container';
+  }
+
+  componentContext() {
+    return this.dataValue;
+  }
+
+  setValue(value, flags) {
+    flags = flags || {};
+    let changed = false;
+    const hasValue = this.hasValue();
+    if (hasValue && _.isEmpty(this.dataValue)) {
+      flags.noValidate = true;
+    }
+    if (!value || !_.isObject(value) || !hasValue) {
+      changed = true;
+      this.dataValue = this.defaultValue;
+    }
+    else {
+      changed = this.hasChanged(value, this.dataValue);
+      this.dataValue = value;
+    }
+    super.setValue(value, flags);
+    this.updateOnChange(flags, changed);
+    return changed;
+  }
+}
+>>>>>>> newFormio

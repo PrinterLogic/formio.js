@@ -1,6 +1,32 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
+=======
+import NestedComponent from '../_classes/nested/NestedComponent';
+
+export default class WellComponent extends NestedComponent {
+  static schema(...extend) {
+    return NestedComponent.schema({
+      type: 'well',
+      key: 'well',
+      input: false,
+      persistent: false,
+      components: []
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Well',
+      icon: 'square-o',
+      group: 'layout',
+      documentation: 'http://help.form.io/userguide/#well',
+      weight: 60,
+      schema: WellComponent.schema()
+    };
+  }
+>>>>>>> newFormio
 
 require("core-js/modules/es.symbol.description");
 
@@ -29,6 +55,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+<<<<<<< HEAD
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -54,6 +81,19 @@ function (_NestedComponent) {
     _classCallCheck(this, WellComponent);
 
     return _possibleConstructorReturn(this, _getPrototypeOf(WellComponent).apply(this, arguments));
+=======
+  get className() {
+    return `${this.component.customClass}`;
+  }
+
+  get templateName() {
+    return 'well';
+  }
+
+  constructor(...args) {
+    super(...args);
+    this.noField = true;
+>>>>>>> newFormio
   }
 
   _createClass(WellComponent, [{

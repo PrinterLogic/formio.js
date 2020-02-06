@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.array.concat");
@@ -24,3 +25,22 @@ function _default() {
     }]
   }]].concat(extend));
 }
+=======
+import baseEditForm from '../_classes/component/Component.form';
+
+import ContainerEditDisplay from './editForm/Container.edit.display';
+import ContainerEditData from './editForm/Container.edit.data';
+
+export default function(...extend) {
+  return baseEditForm([
+    {
+      key: 'display',
+      components: ContainerEditDisplay
+    },
+    {
+      key: 'data',
+      components: ContainerEditData
+    },
+  ], ...extend);
+}
+>>>>>>> newFormio

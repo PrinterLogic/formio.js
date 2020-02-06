@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -38,6 +39,22 @@ var Contrib = {
   },
   sketchpad: _sketchpad.default,
   tagpad: _tagpad.default
+=======
+import StripeComponent from './stripe/stripe/Stripe';
+import StripeCheckoutComponent from './stripe/checkout/StripeCheckout';
+import LocationComponent from './location/Location';
+import EditTableComponent from './edittable/EditTable';
+import ModalEdit from './modaledit/ModalEdit';
+
+const Contrib = {
+  stripe: {
+    stripe: StripeComponent,
+    checkout: StripeCheckoutComponent,
+  },
+  location: LocationComponent,
+  edittable: EditTableComponent,
+  modaledit: ModalEdit,
+>>>>>>> newFormio
 };
 var _default = Contrib;
 exports.default = _default;

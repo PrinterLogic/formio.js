@@ -12,6 +12,10 @@ const cleanCSS = require('gulp-clean-css');
 const eslint = require('gulp-eslint');
 const insert = require('gulp-insert');
 const template = require('gulp-template');
+<<<<<<< HEAD
+=======
+const packageJson = require('./package.json');
+>>>>>>> newFormio
 
 // Clean lib folder.
 gulp.task('clean', require('del').bind(null, ['dist', 'lib']));
@@ -26,11 +30,29 @@ gulp.task('eslint', function eslintTask() {
 
 // Run babel on source code.
 gulp.task('babel', gulp.series('eslint', function babelTask() {
+<<<<<<< HEAD
+  return gulp.src(['./src/**/*.js', '!./src/**/*.spec.js'])
+=======
+  const FormioFilter = filter('**/Formio.js', { restore: true });
+  return gulp.src(['./src/**/*.js', '!./src/**/*.spec.js'])
+    .pipe(FormioFilter)
+    .pipe(replace('---VERSION---', packageJson.version))
+    .pipe(FormioFilter.restore)
+>>>>>>> newFormio
+    .pipe(babel())
+    .pipe(gulp.dest('lib'));
+}));
+
+<<<<<<< HEAD
+=======
+// Run babel without linting
+gulp.task('babel-nolint', gulp.series(function babelTask() {
   return gulp.src(['./src/**/*.js', '!./src/**/*.spec.js'])
     .pipe(babel())
     .pipe(gulp.dest('lib'));
 }));
 
+>>>>>>> newFormio
 // Compile all *.ejs files to pre-compiled templates and append *.js to the filename.
 gulp.task('templates', () =>
   gulp.src('./src/**/*.ejs')
@@ -146,6 +168,14 @@ gulp.task('package-version', function() {
 // Copy over the dist folder into the lib folder.
 gulp.task('dist', () => gulp.src(['dist/**/*.*']).pipe(gulp.dest('lib/dist')));
 
+// Copy over the types folder and index.d.ts into the lib folder.
+gulp.task('types-index', () => gulp.src(['index.d.ts']).pipe(gulp.dest('lib')));
+gulp.task('types-folder', () => gulp.src(['types/**/*.*']).pipe(gulp.dest('lib/types')));
+gulp.task('types', gulp.parallel('types-index', 'types-folder'));
+
+// Copy over the readme and changelog files
+gulp.task('readme', () => gulp.src(['README.md', 'Changelog.md']).pipe(gulp.dest('lib')));
+
 // Watch for changes.
 gulp.task('watch', () => gulp.watch(['./src/*.js', './src/**/*.js'], gulp.series('scripts-full')));
 
@@ -176,8 +206,33 @@ gulp.task('build', gulp.series(
     'scripts-form',
     'scripts-full'
   ),
+<<<<<<< HEAD
   'dist'
 ));
+=======
+  'dist',
+  'types',
+  'readme'
+));
+
+// Create a new build (scripts only)
+gulp.task('rebuild-scripts', gulp.series(
+  'babel-nolint',
+  gulp.parallel(
+    'scripts-formio',
+    'scripts-utils',
+    'scripts-embed',
+    'scripts-contrib',
+    'scripts-form',
+    'scripts-full'
+  ),
+  'dist',
+  'types'
+));
+
+// Watch for changes.
+gulp.task('watch-rebuild', () => gulp.watch(['./src/*.js', './src/**/*.js'], gulp.series('rebuild-scripts')));
+>>>>>>> newFormio
 
 // Default task. Build and watch.
 gulp.task('default', gulp.series('babel', 'scripts-full', 'watch'));

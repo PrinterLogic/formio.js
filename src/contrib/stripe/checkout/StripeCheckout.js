@@ -81,6 +81,7 @@ function (_ButtonComponent) {
 
     _this.componentAction = _this.component.action; // Force button to handle event action to build button
 
+<<<<<<< HEAD
     _this.component.action = 'event';
     return _this;
   }
@@ -89,6 +90,32 @@ function (_ButtonComponent) {
     key: "getValue",
     value: function getValue() {
       return this.dataValue;
+=======
+  static get builderInfo() {
+    return {
+      group: false,
+      schema: ButtonComponent.schema()
+    };
+  }
+
+  getValue() {
+    return this.dataValue;
+  }
+
+  setValue(value, flags) {
+    return this.updateValue(value, flags);
+  }
+
+  /**
+   * Handle event dispatched by Stripe library
+   * @param {Object} token - The token returned by Stripe.
+   */
+  onToken(token) {
+    this.setValue(token.id);
+    // In case of submit, submit the form
+    if (this.componentAction === 'submit') {
+      this.emit('submitButton');
+>>>>>>> newFormio
     }
   }, {
     key: "setValue",
@@ -123,6 +150,7 @@ function (_ButtonComponent) {
     value: function onClickButton(event) {
       var _this2 = this;
 
+<<<<<<< HEAD
       // Return if component call is not the current component
       if (this.component.key !== event.component.key) {
         return;
@@ -134,6 +162,26 @@ function (_ButtonComponent) {
       _lodash.default.each(popupConfiguration, function (value, key) {
         popupConfiguration[key] = _this2.t(value);
       });
+=======
+    // In case of submit, add event listeners
+    if (this.componentAction === 'submit') {
+      this.on('submitButton', () => {
+        this.loading = true;
+        this.disabled = true;
+      }, true);
+      this.on('submitDone', () => {
+        this.loading = false;
+        this.disabled = false;
+      }, true);
+      this.on('change', (value) => {
+        this.loading = false;
+        this.disabled = (this.component.disableOnInvalid && !this.root.isValid(value.data, true));
+      }, true);
+      this.on('error', () => {
+        this.loading = false;
+      }, true);
+    }
+>>>>>>> newFormio
 
       if (this.componentAction === 'submit') {
         // In case of submit, validate the form before opening button

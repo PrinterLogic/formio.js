@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.array.concat");
@@ -23,3 +24,17 @@ function _default() {
     components: _TagsEdit.default
   }]].concat(extend));
 }
+=======
+import baseEditForm from '../_classes/component/Component.form';
+
+import TagsEditData from './editForm/Tags.edit.data';
+
+export default function(...extend) {
+  return baseEditForm([
+    {
+      key: 'data',
+      components: TagsEditData
+    }
+  ], ...extend);
+}
+>>>>>>> newFormio

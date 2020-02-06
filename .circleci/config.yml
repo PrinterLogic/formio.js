@@ -2,7 +2,11 @@ version: 2
 jobs:
   build:
     docker:
+<<<<<<< HEAD
       - image: circleci/node:8-browsers
+=======
+      - image: circleci/node:12-browsers
+>>>>>>> newFormio
         environment:
             CHROME_BIN: "/usr/bin/google-chrome"
     steps:

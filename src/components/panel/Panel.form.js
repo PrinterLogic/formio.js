@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.array.concat");
@@ -28,3 +29,22 @@ function _default() {
     components: _PanelEdit2.default
   }]].concat(extend));
 }
+=======
+import nestedComponentForm from '../_classes/nested/NestedComponent.form';
+
+import PanelEditDisplay from './editForm/Panel.edit.display';
+import PanelEditConditional from './editForm/Panel.edit.conditional';
+
+export default function(...extend) {
+  return nestedComponentForm([
+    {
+      key: 'display',
+      components: PanelEditDisplay
+    },
+    {
+      key: 'conditional',
+      components: PanelEditConditional,
+    }
+  ], ...extend);
+}
+>>>>>>> newFormio

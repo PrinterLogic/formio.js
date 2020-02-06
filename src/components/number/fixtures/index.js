@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37,3 +38,9 @@ var _comp7 = _interopRequireDefault(require("./comp3"));
 var _comp8 = _interopRequireDefault(require("./comp4"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+export comp1 from './comp1';
+export comp2 from './comp2';
+export comp3 from './comp3';
+export comp4 from './comp4';
+>>>>>>> newFormio

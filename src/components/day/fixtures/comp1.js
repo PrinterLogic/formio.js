@@ -23,7 +23,7 @@ var _default = {
     'year': {
       'required': false,
       'placeholder': '',
-      'type': 'text'
+      'type': 'number'
     },
     'month': {
       'required': false,
@@ -33,7 +33,7 @@ var _default = {
     'day': {
       'required': false,
       'placeholder': '',
-      'type': 'text'
+      'type': 'number'
     }
   },
   'key': 'date',

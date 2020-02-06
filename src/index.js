@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.object.keys");
@@ -33,3 +34,7 @@ Object.keys(_formio).forEach(function (key) {
 var _FormBuilder2 = _interopRequireDefault(require("./FormBuilder"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+export * from './formio.form';
+export FormBuilder from './FormBuilder';
+>>>>>>> newFormio

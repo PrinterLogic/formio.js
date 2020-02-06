@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8,3 +9,15 @@ var _default = [
  
 ];
 exports.default = _default;
+=======
+export default [
+  {
+    key: 'validateOn',
+    ignore: true
+  },
+  {
+    key: 'unique',
+    ignore: true
+  },
+];
+>>>>>>> newFormio

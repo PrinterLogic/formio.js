@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5,6 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
+=======
+export default {
+>>>>>>> newFormio
   label: 'Number',
   multiple: true,
   mask: false,
@@ -18,4 +22,7 @@ var _default = {
   encrypted: false,
   decimalLimit: 2
 };
+<<<<<<< HEAD
 exports.default = _default;
+=======
+>>>>>>> newFormio

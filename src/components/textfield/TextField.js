@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -54,6 +55,41 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+=======
+import Input from '../_classes/input/Input';
+import { conformToMask } from 'vanilla-text-mask';
+import * as FormioUtils from '../../utils/utils';
+
+export default class TextFieldComponent extends Input {
+  static schema(...extend) {
+    return Input.schema({
+      label: 'Text Field',
+      key: 'textField',
+      type: 'textfield',
+      mask: false,
+      inputType: 'text',
+      inputFormat: 'plain',
+      inputMask: '',
+      tableView: true,
+      validate: {
+        minLength: '',
+        maxLength: '',
+        pattern: ''
+      }
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Text Field',
+      icon: 'terminal',
+      group: 'basic',
+      documentation: 'http://help.form.io/userguide/#textfield',
+      weight: 0,
+      schema: TextFieldComponent.schema()
+    };
+  }
+>>>>>>> newFormio
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
@@ -78,10 +114,16 @@ function (_BaseComponent) {
     return _possibleConstructorReturn(this, _getPrototypeOf(TextFieldComponent).apply(this, arguments));
   }
 
+<<<<<<< HEAD
   _createClass(TextFieldComponent, [{
     key: "elementInfo",
     value: function elementInfo() {
       var info = _get(_getPrototypeOf(TextFieldComponent.prototype), "elementInfo", this).call(this);
+=======
+  get inputInfo() {
+    const info = super.inputInfo;
+    info.type = 'input';
+>>>>>>> newFormio
 
       info.type = 'input';
 
@@ -145,6 +187,7 @@ function (_BaseComponent) {
         container.appendChild(this.charCount);
       }
 
+<<<<<<< HEAD
       return container;
     }
   }, {
@@ -270,6 +313,75 @@ function (_BaseComponent) {
       }
 
       return input && input.text ? input.text : input;
+=======
+  /**
+   * Returns the mask value object.
+   *
+   * @param value
+   * @param flags
+   * @return {*}
+   */
+  maskValue(value, flags) {
+    flags = flags || {};
+
+    // Convert it into the correct format.
+    if (!value || (typeof value !== 'object')) {
+      value = {
+        value,
+        maskName: this.component.inputMasks[0].label
+      };
+    }
+
+    // If no value is provided, then set the defaultValue.
+    if (!value.value) {
+      const defaultValue = flags.noDefault ? this.emptyValue : this.defaultValue;
+      value.value = Array.isArray(defaultValue) ? defaultValue[0] : defaultValue;
+    }
+
+    return value;
+  }
+
+  /**
+   * Normalize the value set in the data object.
+   *
+   * @param value
+   * @param flags
+   * @return {*}
+   */
+  normalizeValue(value, flags) {
+    if (!this.isMultipleMasksField) {
+      return super.normalizeValue(value);
+    }
+    if (Array.isArray(value)) {
+      return super.normalizeValue(value.map((val) => this.maskValue(val, flags)));
+    }
+    return super.normalizeValue(this.maskValue(value, flags));
+  }
+
+  /**
+   * Sets the value at this index.
+   *
+   * @param index
+   * @param value
+   * @param flags
+   */
+  setValueAt(index, value, flags) {
+    flags = flags || {};
+    if (!this.isMultipleMasksField) {
+      return super.setValueAt(index, value, flags);
+    }
+    value = this.maskValue(value, flags);
+    const textValue = value.value || '';
+    const textInput = this.refs.mask ? this.refs.mask[index] : null;
+    const maskInput = this.refs.select ? this.refs.select[index]: null;
+    const mask = this.getMaskPattern(value.maskName);
+    if (textInput && maskInput && mask) {
+      textInput.value = conformToMask(textValue, FormioUtils.getInputMask(mask)).conformedValue;
+      maskInput.value = value.maskName;
+    }
+    else {
+      return super.setValueAt(index, textValue, flags);
+>>>>>>> newFormio
     }
   }, {
     key: "buildInput",
@@ -278,6 +390,7 @@ function (_BaseComponent) {
         return _get(_getPrototypeOf(TextFieldComponent.prototype), "buildInput", this).call(this, container, value, index);
       }
 
+<<<<<<< HEAD
       this.createInput(container);
       this.setValueAt(index, value);
     }
@@ -420,3 +533,30 @@ function (_BaseComponent) {
 }(_Base.default);
 
 exports.default = TextFieldComponent;
+=======
+  /**
+   * Returns the value at this index.
+   *
+   * @param index
+   * @return {*}
+   */
+  getValueAt(index) {
+    if (!this.isMultipleMasksField) {
+      return super.getValueAt(index);
+    }
+    const textInput = this.refs.mask ? this.refs.mask[index] : null;
+    const maskInput = this.refs.select ? this.refs.select[index]: null;
+    return {
+      value: textInput ? textInput.value : undefined,
+      maskName: maskInput ? maskInput.value : undefined
+    };
+  }
+
+  isEmpty(value = this.dataValue) {
+    if (!this.isMultipleMasksField) {
+      return super.isEmpty((value || '').toString().trim());
+    }
+    return super.isEmpty(value) || (this.component.multiple ? value.length === 0 : (!value.maskName || !value.value));
+  }
+}
+>>>>>>> newFormio

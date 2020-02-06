@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.array.concat");
@@ -24,6 +25,11 @@ var _utils = require("./utils");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = {
+=======
+import _ from 'lodash';
+import { eachComponent, uniqueKey } from './utils';
+export default {
+>>>>>>> newFormio
   /**
    * Appends a number to a component.key to keep it unique
    *
@@ -32,12 +38,21 @@ var _default = {
    * @param {Object} component
    *   The component to uniquify
    */
+<<<<<<< HEAD
   uniquify: function uniquify(form, component) {
     var changed = false;
     var formKeys = {};
     (0, _utils.eachComponent)(form.components, function (comp) {
       formKeys[comp.key] = true;
     }, true); // Recurse into all child components.
+=======
+  uniquify(container, component) {
+    let changed = false;
+    const formKeys = {};
+    eachComponent(container, function(comp) {
+      formKeys[comp.key] = true;
+    }, true);
+>>>>>>> newFormio
 
     (0, _utils.eachComponent)([component], function (component) {
       // Skip key uniquification if this component doesn't have a key.
@@ -45,10 +60,17 @@ var _default = {
         return;
       }
 
+<<<<<<< HEAD
       var newKey = (0, _utils.uniqueKey)(formKeys, component.key);
 
       if (newKey !== component.key) {
         component.key = newKey;
+=======
+      const newKey = uniqueKey(formKeys, component.key);
+      if (newKey !== component.key) {
+        component.key = newKey;
+        formKeys[newKey] = true;
+>>>>>>> newFormio
         changed = true;
       }
     }, true);
@@ -65,9 +87,17 @@ var _default = {
   getAdditionalShortcuts: function getAdditionalShortcuts(type) {
     return this.additionalShortcuts[type] || [];
   },
+<<<<<<< HEAD
   getBindedShortcuts: function getBindedShortcuts(components, input) {
     var result = [];
     (0, _utils.eachComponent)(components, function (component) {
+=======
+
+  getBindedShortcuts(components, input) {
+    const result = [];
+
+    eachComponent(components, (component) => {
+>>>>>>> newFormio
       if (component === input) {
         return;
       }
@@ -90,8 +120,18 @@ var _default = {
     if (!component) {
       return [];
     }
+<<<<<<< HEAD
 
     return [''].concat(_lodash.default.difference(this.getAlphaShortcuts().concat(this.getAdditionalShortcuts(component.type)), this.getBindedShortcuts(form.components, component)));
+=======
+    return [''].concat(_.difference(
+      this.getAlphaShortcuts().concat(this.getAdditionalShortcuts(component.type)),
+      this.getBindedShortcuts(form.components, component)),
+    ).map((shortcut) => ({
+      label: shortcut,
+      value: shortcut,
+    }));
+>>>>>>> newFormio
   }
 };
 exports.default = _default;

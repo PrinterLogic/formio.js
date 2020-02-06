@@ -1,9 +1,40 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
+=======
+import _ from 'lodash';
+import Field from '../_classes/field/Field';
+
+export default class CheckBoxComponent extends Field {
+  static schema(...extend) {
+    return Field.schema({
+      type: 'checkbox',
+      inputType: 'checkbox',
+      label: 'Checkbox',
+      key: 'checkbox',
+      dataGridLabel: true,
+      labelPosition: 'right',
+      value: '',
+      name: ''
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Checkbox',
+      group: 'basic',
+      icon: 'check-square',
+      documentation: 'http://help.form.io/userguide/#checkbox',
+      weight: 50,
+      schema: CheckBoxComponent.schema()
+    };
+  }
+>>>>>>> newFormio
 
 require("core-js/modules/es.symbol.description");
 
+<<<<<<< HEAD
 require("core-js/modules/es.symbol.iterator");
 
 require("core-js/modules/es.array.concat");
@@ -184,6 +215,97 @@ function (_BaseComponent) {
         class: className
       });
       this.element.component = this;
+=======
+  get defaultValue() {
+    return this.component.name ? '' : (this.component.defaultValue || false).toString() === 'true';
+  }
+
+  get labelClass() {
+    let className = '';
+    if (this.isInputComponent
+      && !this.options.inputsOnly
+      && this.component.validate
+      && this.component.validate.required) {
+      className += ' field-required';
+    }
+    return `${className}`;
+  }
+
+  get hasSetValue() {
+    return this.hasValue();
+  }
+
+  get inputInfo() {
+    const info = super.elementInfo();
+    info.type = 'input';
+    info.changeEvent = 'click';
+    info.attr.type = this.component.inputType || 'checkbox';
+    info.attr.class = 'form-check-input';
+    if (this.component.name) {
+      info.attr.name = `data[${this.component.name}]`;
+    }
+    info.attr.value = this.component.value ? this.component.value : 0;
+    info.label = this.t(this.component.label);
+    info.labelClass = this.labelClass;
+    return info;
+  }
+
+  get labelInfo() {
+    return {
+      hidden: true
+    };
+  }
+
+  render() {
+    return super.render(this.renderTemplate('checkbox', {
+      input: this.inputInfo,
+      checked: this.dataValue,
+      tooltip: this.interpolate(this.t(this.component.tooltip) || '').replace(/(?:\r\n|\r|\n)/g, '<br />')
+    }));
+  }
+
+  attach(element) {
+    this.loadRefs(element, { input: 'multiple' });
+    this.input = this.refs.input[0];
+    if (this.refs.input) {
+      this.addEventListener(this.input, this.inputInfo.changeEvent, () => this.updateValue(null, {
+        modified: true
+      }));
+      this.addShortcut(this.input);
+    }
+    return super.attach(element);
+  }
+
+  detach(element) {
+    if (element && this.input) {
+      this.removeShortcut(this.input);
+    }
+  }
+
+  get emptyValue() {
+    return false;
+  }
+
+  isEmpty(value = this.dataValue) {
+    return super.isEmpty(value) || value === false;
+  }
+
+  /**
+   *
+   * @param value {*}
+   * @returns {*}
+   */
+  set dataValue(value) {
+    const setValue = (super.dataValue = value);
+    if (
+      !this.key ||
+      (!this.visible && this.component.clearOnHide && !this.rootPristine)
+    ) {
+      return setValue;
+    }
+    if (this.component.name) {
+      _.set(this._data, this.component.key, setValue === this.component.value);
+>>>>>>> newFormio
     }
   }, {
     key: "labelOnTheTopOrLeft",
@@ -336,7 +458,14 @@ function (_BaseComponent) {
         this.input.checked = 0;
       }
 
+<<<<<<< HEAD
       return value;
+=======
+  get dataValue() {
+    const getValue = super.dataValue;
+    if (this.component.name) {
+      _.set(this._data, this.component.key, getValue === this.component.value);
+>>>>>>> newFormio
     }
   }, {
     key: "setValue",
@@ -347,6 +476,7 @@ function (_BaseComponent) {
         return;
       }
 
+<<<<<<< HEAD
       this.setCheckedState(value);
       return this.updateValue(flags, value);
     }
@@ -359,9 +489,18 @@ function (_BaseComponent) {
     key: "destroy",
     value: function destroy() {
       _get(_getPrototypeOf(CheckBoxComponent.prototype), "destroy", this).call(this);
+=======
+  getValueAt(index) {
+    if (this.component.name) {
+      return this.refs.input[index].checked ? this.component.value : '';
+    }
+    return !!this.refs.input[index].checked;
+  }
+>>>>>>> newFormio
 
       this.removeShortcut();
     }
+<<<<<<< HEAD
   }, {
     key: "updateValue",
     value: function updateValue(flags, value) {
@@ -394,6 +533,10 @@ function (_BaseComponent) {
       }
 
       return changed;
+=======
+    else {
+      return (value === '') ? this.dataValue : !!value;
+>>>>>>> newFormio
     }
   }, {
     key: "defaultSchema",
@@ -465,6 +608,7 @@ function (_BaseComponent) {
         name: ''
       }].concat(extend));
     }
+<<<<<<< HEAD
   }, {
     key: "builderInfo",
     get: function get() {
@@ -483,3 +627,23 @@ function (_BaseComponent) {
 }(_Base.default);
 
 exports.default = CheckBoxComponent;
+=======
+    return value;
+  }
+
+  setValue(value, flags) {
+    flags = flags || {};
+    if (
+      this.setCheckedState(value) !== undefined ||
+      (!this.input && value !== undefined && (this.visible || !this.component.clearOnHide))
+    ) {
+      return this.updateValue(value, flags);
+    }
+    return false;
+  }
+
+  getValueAsString(value) {
+    return value ? 'Yes' : 'No';
+  }
+}
+>>>>>>> newFormio

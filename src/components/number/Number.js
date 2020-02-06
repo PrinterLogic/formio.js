@@ -1,11 +1,50 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
 
 require("core-js/modules/es.symbol.description");
+=======
+import { maskInput, conformToMask } from 'vanilla-text-mask';
+import _ from 'lodash';
+import { createNumberMask } from 'text-mask-addons';
+import Input from '../_classes/input/Input';
+import { getNumberSeparators, getNumberDecimalLimit } from '../../utils/utils';
+
+export default class NumberComponent extends Input {
+  static schema(...extend) {
+    return Input.schema({
+      type: 'number',
+      label: 'Number',
+      key: 'number',
+      validate: {
+        min: '',
+        max: '',
+        step: 'any',
+        integer: ''
+      }
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Number',
+      icon: 'hashtag',
+      group: 'basic',
+      documentation: 'http://help.form.io/userguide/#number',
+      weight: 30,
+      schema: NumberComponent.schema()
+    };
+  }
+
+  constructor(...args) {
+    super(...args);
+    this.validators = this.validators.concat(['min', 'max']);
+>>>>>>> newFormio
 
 require("core-js/modules/es.symbol.iterator");
 
+<<<<<<< HEAD
 require("core-js/modules/es.array.concat");
 
 require("core-js/modules/es.array.includes");
@@ -100,6 +139,17 @@ function (_BaseComponent) {
           integer: ''
         }
       }].concat(extend));
+=======
+    this.decimalSeparator = this.options.decimalSeparator = this.options.decimalSeparator
+      || separators.decimalSeparator;
+
+    if (this.component.delimiter) {
+      if (this.options.hasOwnProperty('thousandsSeparator')) {
+        console.warn("Property 'thousandsSeparator' is deprecated. Please use i18n to specify delimiter.");
+      }
+
+      this.delimiter = this.options.thousandsSeparator || separators.delimiter;
+>>>>>>> newFormio
     }
   }, {
     key: "builderInfo",
@@ -115,20 +165,67 @@ function (_BaseComponent) {
     }
   }]);
 
+<<<<<<< HEAD
   function NumberComponent(component, options, data) {
     var _this;
 
     _classCallCheck(this, NumberComponent);
+=======
+    const requireDecimal = _.get(this.component, 'requireDecimal', false);
+    this.decimalLimit = getNumberDecimalLimit(this.component, requireDecimal ? 2 : 20);
+
+    // Currencies to override BrowserLanguage Config. Object key {}
+    if (_.has(this.options, `languageOverride.${this.options.language}`)) {
+      const override = _.get(this.options, `languageOverride.${this.options.language}`);
+      this.decimalSeparator = override.decimalSeparator;
+      this.delimiter = override.delimiter;
+    }
+    this.numberMask = this.createNumberMask();
+  }
+
+  /**
+   * Creates the number mask for normal numbers.
+   *
+   * @return {*}
+   */
+  createNumberMask() {
+    return createNumberMask({
+      prefix: '',
+      suffix: '',
+      requireDecimal: _.get(this.component, 'requireDecimal', false),
+      thousandsSeparatorSymbol: _.get(this.component, 'thousandsSeparator', this.delimiter),
+      decimalSymbol: _.get(this.component, 'decimalSymbol', this.decimalSeparator),
+      decimalLimit: _.get(this.component, 'decimalLimit', this.decimalLimit),
+      allowNegative: _.get(this.component, 'allowNegative', true),
+      allowDecimal: _.get(this.component, 'allowDecimal',
+        !(this.component.validate && this.component.validate.integer))
+    });
+  }
+>>>>>>> newFormio
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(NumberComponent).call(this, component, options, data));
     _this.validators = _this.validators.concat(['min', 'max']);
     var separators = (0, _utils.getNumberSeparators)(_this.options.language);
     _this.decimalSeparator = _this.options.decimalSeparator = _this.options.decimalSeparator || separators.decimalSeparator;
 
+<<<<<<< HEAD
     if (_this.component.delimiter) {
       if (_this.options.hasOwnProperty('thousandsSeparator')) {
         console.warn("Property 'thousandsSeparator' is deprecated. Please use i18n to specify delimiter.");
       }
+=======
+  get defaultValue() {
+    let defaultValue = super.defaultValue;
+    if (!defaultValue && this.component.defaultValue === 0) {
+      defaultValue = this.component.defaultValue;
+    }
+    return defaultValue;
+  }
+
+  parseNumber(value) {
+    // Remove delimiters and convert decimal separator to dot.
+    value = value.split(this.delimiter).join('').replace(this.decimalSeparator, '.');
+>>>>>>> newFormio
 
       _this.delimiter = _this.options.thousandsSeparator || separators.delimiter;
     } else {
@@ -144,6 +241,7 @@ function (_BaseComponent) {
       _this.delimiter = override.delimiter;
     }
 
+<<<<<<< HEAD
     _this.numberMask = (0, _textMaskAddons.createNumberMask)({
       prefix: '',
       suffix: '',
@@ -153,10 +251,22 @@ function (_BaseComponent) {
       decimalLimit: _lodash.default.get(_this.component, 'decimalLimit', _this.decimalLimit),
       allowNegative: _lodash.default.get(_this.component, 'allowNegative', true),
       allowDecimal: _lodash.default.get(_this.component, 'allowDecimal', !(_this.component.validate && _this.component.validate.integer))
+=======
+  setInputMask(input) {
+    let numberPattern = '[0-9';
+    numberPattern += this.decimalSeparator || '';
+    numberPattern += this.delimiter || '';
+    numberPattern += ']*';
+    input.setAttribute('pattern', numberPattern);
+    input.mask = maskInput({
+      inputElement: input,
+      mask: this.numberMask
+>>>>>>> newFormio
     });
     return _this;
   }
 
+<<<<<<< HEAD
   _createClass(NumberComponent, [{
     key: "parseNumber",
     value: function parseNumber(value) {
@@ -177,6 +287,24 @@ function (_BaseComponent) {
         inputElement: input,
         mask: this.numberMask
       });
+=======
+  get inputInfo() {
+    const info = super.inputInfo;
+    if (this.component.mask) {
+      info.attr.type = 'password';
+    }
+    else {
+      info.attr.type = 'text';
+    }
+    info.attr.inputmode = 'numeric';
+    info.changeEvent = 'input';
+    return info;
+  }
+
+  getValueAt(index) {
+    if (!this.refs.input.length || !this.refs.input[index]) {
+      return null;
+>>>>>>> newFormio
     }
   }, {
     key: "elementInfo",
@@ -195,6 +323,7 @@ function (_BaseComponent) {
         return null;
       }
 
+<<<<<<< HEAD
       var val = this.inputs[index].value;
 
       if (!val) {
@@ -224,6 +353,18 @@ function (_BaseComponent) {
       } else if (this.component.requireDecimal && value && value.includes(this.decimalSeparator)) {
         return "".concat(value).concat(_lodash.default.repeat('0', this.decimalLimit - value.split(this.decimalSeparator)[1].length), ")}");
       }
+=======
+    const val = this.refs.input[index].value;
+    return val ? this.parseNumber(val) : null;
+  }
+
+  setValueAt(index, value, flags) {
+    return super.setValueAt(index, this.formatValue(this.parseValue(value)), flags);
+  }
+
+  parseValue(input) {
+    let value = parseFloat(input);
+>>>>>>> newFormio
 
       return value;
     }
@@ -273,15 +414,22 @@ function (_BaseComponent) {
 
       return input;
     }
+<<<<<<< HEAD
   }, {
     key: "getView",
     value: function getView(value) {
       if (!value && value !== 0) {
         return '';
       }
+=======
+    else if (this.component.requireDecimal && value && value.includes(this.decimalSeparator)) {
+      return `${value}${_.repeat('0', this.decimalLimit - value.split(this.decimalSeparator)[1].length)}`;
+    }
+>>>>>>> newFormio
 
       var widget = this.widget;
 
+<<<<<<< HEAD
       if (widget && widget.getView) {
         return widget.getView(value);
       }
@@ -314,3 +462,36 @@ function (_BaseComponent) {
 }(_Base.default);
 
 exports.default = NumberComponent;
+=======
+  focus() {
+    const input = this.refs.input[0];
+    if (input) {
+      input.focus();
+      input.setSelectionRange(0, input.value.length);
+    }
+  }
+
+  getMaskedValue(value) {
+    return conformToMask(value === null ? '0' : value.toString(), this.numberMask).conformedValue;
+  }
+
+  getValueAsString(value) {
+    if (!value && value !== 0) {
+      return '';
+    }
+    value = this.getWidgetValueAsString(value);
+    if (Array.isArray(value)) {
+      return value.map(this.getMaskedValue).join(', ');
+    }
+    return this.getMaskedValue(value);
+  }
+
+  addFocusBlurEvents(element) {
+    super.addFocusBlurEvents(element);
+
+    this.addEventListener(element, 'blur', () => {
+      element.value = this.getValueAsString(this.formatValue(this.parseValue(this.dataValue)));
+    });
+  }
+}
+>>>>>>> newFormio

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -54,6 +55,33 @@ function (_BaseComponent) {
     _classCallCheck(this, UnknownComponent);
 
     return _possibleConstructorReturn(this, _getPrototypeOf(UnknownComponent).apply(this, arguments));
+=======
+import Component from '../_classes/component/Component';
+
+export default class UnknownComponent extends Component {
+  static schema() {
+    return {
+      type: 'custom',
+      key: 'custom',
+      protected: false,
+      persistent: true
+    };
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Custom',
+      icon: 'cubes',
+      group: 'premium',
+      documentation: 'https://help.form.io/userguide/form-components/#custom',
+      weight: 120,
+      schema: UnknownComponent.schema()
+    };
+  }
+
+  get defaultSchema() {
+    return UnknownComponent.schema();
+>>>>>>> newFormio
   }
 
   _createClass(UnknownComponent, [{

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5,10 +6,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
+=======
+export default {
+>>>>>>> newFormio
   label: 'Children',
   key: 'children',
   type: 'datagrid',
   input: true,
+<<<<<<< HEAD
   components: [{
     type: 'panel',
     label: 'User Information',
@@ -27,3 +32,27 @@ var _default = {
   }]
 };
 exports.default = _default;
+=======
+  components: [
+    {
+      type: 'panel',
+      label: 'User Information',
+      key: 'userinfo',
+      components: [
+        {
+          label: 'First Name',
+          key: 'firstName',
+          type: 'textfield',
+          input: true
+        },
+        {
+          label: 'Last Name',
+          key: 'lastName',
+          type: 'textfield',
+          input: true
+        }
+      ]
+    }
+  ]
+};
+>>>>>>> newFormio

@@ -1,6 +1,35 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
+=======
+import Component from '../_classes/component/Component';
+import _ from 'lodash';
+
+export default class HTMLComponent extends Component {
+  static schema(...extend) {
+    return Component.schema({
+      label: 'HTML',
+      type: 'htmlelement',
+      tag: 'p',
+      attrs: [],
+      content: '',
+      input: false,
+      persistent: false
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'HTML Element',
+      group: 'layout',
+      icon: 'code',
+      weight: 0,
+      documentation: 'http://help.form.io/userguide/#html-element-component',
+      schema: HTMLComponent.schema()
+    };
+  }
+>>>>>>> newFormio
 
 require("core-js/modules/es.symbol.description");
 
@@ -39,6 +68,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+<<<<<<< HEAD
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
@@ -133,3 +163,59 @@ function (_BaseComponent) {
 }(_Base.default);
 
 exports.default = HTMLComponent;
+=======
+  get content() {
+    if (this.builderMode) {
+      return this.component.content;
+    }
+    const submission = _.get(this.root, 'submission', {});
+    return this.component.content ? this.interpolate(this.component.content, {
+      metadata: submission.metadata || {},
+      submission: submission,
+      data: this.rootValue,
+      row: this.data
+    }) : '';
+  }
+
+  get singleTags() {
+    return ['br', 'img', 'hr'];
+  }
+
+  checkRefreshOn(changed) {
+    super.checkRefreshOn(changed);
+    if (!this.builderMode && this.component.refreshOnChange && this.element) {
+      this.setContent(this.element, this.renderContent());
+    }
+  }
+
+  renderContent() {
+    const submission = _.get(this.root, 'submission', {});
+    return this.renderTemplate('html', {
+      component: this.component,
+      tag: this.component.tag,
+      attrs: (this.component.attrs || []).map((attr) => {
+        return {
+          attr: attr.attr,
+          value: this.interpolate(attr.value, {
+            metadata: submission.metadata || {},
+            submission: submission,
+            data: this.rootValue,
+            row: this.data
+          })
+        };
+      }),
+      content: this.content,
+      singleTags: this.singleTags,
+    });
+  }
+
+  render() {
+    return super.render(this.renderContent());
+  }
+
+  attach(element) {
+    this.loadRefs(element, { html: 'single' });
+    return super.attach(element);
+  }
+}
+>>>>>>> newFormio

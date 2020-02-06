@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5,12 +6,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
+=======
+export default {
+>>>>>>> newFormio
   'conditional': {
     'eq': '',
     'when': null,
     'show': ''
   },
+<<<<<<< HEAD
   'tags': [],
+=======
+  'tags': [
+
+  ],
+>>>>>>> newFormio
   'type': 'day',
   'validate': {
     'custom': ''
@@ -23,7 +33,11 @@ var _default = {
     'year': {
       'required': true,
       'placeholder': '',
+<<<<<<< HEAD
       'type': 'text'
+=======
+      'type': 'number'
+>>>>>>> newFormio
     },
     'month': {
       'required': true,
@@ -33,7 +47,11 @@ var _default = {
     'day': {
       'required': true,
       'placeholder': '',
+<<<<<<< HEAD
       'type': 'text'
+=======
+      'type': 'number'
+>>>>>>> newFormio
     }
   },
   'key': 'date',
@@ -41,4 +59,7 @@ var _default = {
   'tableView': true,
   'input': true
 };
+<<<<<<< HEAD
 exports.default = _default;
+=======
+>>>>>>> newFormio

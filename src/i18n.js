@@ -12,6 +12,11 @@ var _default = {
         complete: 'Submission Complete',
         error: 'Please fix the following errors before submitting.',
         required: '{{field}} is required',
+        unique: '{{field}} must be unique',
+        array: '{{field}} must be an array',
+        array_nonempty: '{{field}} must be a non-empty array', // eslint-disable-line camelcase
+        nonarray: '{{field}} must not be an array',
+        select: '{{field}} contains an invalid selection',
         pattern: '{{field}} does not match the pattern {{pattern}}',
         minLength: '{{field}} must be longer than {{length}} characters.',
         maxLength: '{{field}} must be shorter than {{length}} characters.',
@@ -19,6 +24,7 @@ var _default = {
         maxWords: '{{field}} must have less than {{length}} words.',
         min: '{{field}} cannot be less than {{min}}.',
         max: '{{field}} cannot be greater than {{max}}.',
+<<<<<<< HEAD
         minSelectedCount: 'You must select at least {{minCount}} items to continue.',
         maxSelectedCount: 'You can only select up to {{maxCount}} items to continue.',
         maxDate: '{{field}} should not contain date after {{- maxDate}}',
@@ -33,6 +39,15 @@ var _default = {
         // eslint-disable-line camelcase
         invalid_day: '{{field}} is not a valid day.',
         // eslint-disable-line camelcase
+=======
+        maxDate: '{{field}} should not contain date after {{- maxDate}}',
+        minDate: '{{field}} should not contain date before {{- minDate}}',
+        invalid_email: '{{field}} must be a valid email.', // eslint-disable-line camelcase
+        invalid_url: '{{field}} must be a valid url.', // eslint-disable-line camelcase
+        invalid_regex: '{{field}} does not match the pattern {{regex}}.', // eslint-disable-line camelcase
+        invalid_date: '{{field}} is not a valid date.', // eslint-disable-line camelcase
+        invalid_day: '{{field}} is not a valid day.', // eslint-disable-line camelcase
+>>>>>>> newFormio
         mask: '{{field}} does not match the mask.',
         stripe: '{{stripe}}',
         month: 'Month',

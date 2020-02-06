@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -224,8 +225,101 @@ function (_BaseComponent) {
             value = parseInt(value, 10);
           }
         }
+=======
+import _ from 'lodash';
+import Field from '../_classes/field/Field';
+
+export default class RadioComponent extends Field {
+  static schema(...extend) {
+    return Field.schema({
+      type: 'radio',
+      inputType: 'radio',
+      label: 'Radio',
+      key: 'radio',
+      values: [{ label: '', value: '' }],
+      fieldSet: false
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Radio',
+      group: 'basic',
+      icon: 'dot-circle-o',
+      weight: 80,
+      documentation: 'http://help.form.io/userguide/#radio',
+      schema: RadioComponent.schema()
+    };
+  }
+
+  constructor(component, options, data) {
+    super(component, options, data);
+    this.previousValue = this.dataValue || null;
+  }
+
+  get defaultSchema() {
+    return RadioComponent.schema();
+  }
+
+  get inputInfo() {
+    const info = super.elementInfo();
+    info.type = 'input';
+    info.changeEvent = 'click';
+    info.attr.class = 'form-check-input';
+    info.attr.name = info.attr.name += `[${this.id}]`;
+    return info;
+  }
+
+  get emptyValue() {
+    return '';
+  }
+
+  get isRadio() {
+    return this.component.inputType === 'radio';
+  }
+
+  render() {
+    return super.render(this.renderTemplate('radio', {
+      input: this.inputInfo,
+      inline: this.component.inline,
+      values: this.component.values,
+      value: this.dataValue,
+      row: this.row,
+    }));
+  }
+
+  attach(element) {
+    this.loadRefs(element, { input: 'multiple', wrapper: 'multiple' });
+    this.refs.input.forEach((input, index) => {
+      this.addEventListener(input, this.inputInfo.changeEvent, () => this.updateValue(null, {
+        modified: true,
+      }));
+      this.addShortcut(input, this.component.values[index].shortcut);
+
+      if (this.isRadio) {
+        input.checked = (this.dataValue === input.value);
+        this.addEventListener(input, 'keyup', (event) => {
+          if (event.key === ' ' && this.dataValue === input.value) {
+            event.preventDefault();
+
+            this.updateValue(null, {
+              modified: true,
+            });
+          }
+        });
+      }
+    });
+    return super.attach(element);
+  }
+
+  detach(element) {
+    if (element && this.refs.input) {
+      this.refs.input.forEach((input, index) => {
+        this.removeShortcut(input, this.component.values[index].shortcut);
+>>>>>>> newFormio
       });
 
+<<<<<<< HEAD
       return value;
     }
   }, {
@@ -233,8 +327,19 @@ function (_BaseComponent) {
     value: function getView(value) {
       if (!value) {
         return '';
+=======
+  getValue() {
+    if (this.viewOnly || !this.refs.input || !this.refs.input.length) {
+      return this.dataValue;
+    }
+    let value = this.dataValue;
+    this.refs.input.forEach((input) => {
+      if (input.checked) {
+        value = input.value;
+>>>>>>> newFormio
       }
 
+<<<<<<< HEAD
       if (!_lodash.default.isString(value)) {
         return _lodash.default.toString(value);
       }
@@ -244,6 +349,11 @@ function (_BaseComponent) {
       });
 
       return _lodash.default.get(option, 'label');
+=======
+  getValueAsString(value) {
+    if (!value) {
+      return '';
+>>>>>>> newFormio
     }
   }, {
     key: "setValueAt",
@@ -260,6 +370,7 @@ function (_BaseComponent) {
 
       var changed = _get(_getPrototypeOf(RadioComponent.prototype), "updateValue", this).call(this, flags, value);
 
+<<<<<<< HEAD
       if (changed) {
         //add/remove selected option class
         var _value = this.dataValue;
@@ -278,6 +389,15 @@ function (_BaseComponent) {
       }
 
       return changed;
+=======
+    return _.get(option, 'label', '');
+  }
+
+  setValueAt(index, value) {
+    if (this.refs.input && this.refs.input[index] && value !== null && value !== undefined) {
+      const inputValue = this.refs.input[index].value;
+      this.refs.input[index].checked = (inputValue === value.toString());
+>>>>>>> newFormio
     }
   }, {
     key: "defaultSchema",
@@ -303,6 +423,7 @@ function (_BaseComponent) {
         extend[_key] = arguments[_key];
       }
 
+<<<<<<< HEAD
       return _Base.default.schema.apply(_Base.default, [{
         type: 'radio',
         inputType: 'radio',
@@ -333,3 +454,78 @@ function (_BaseComponent) {
 }(_Base.default);
 
 exports.default = RadioComponent;
+=======
+  updateValue(value, flags) {
+    const changed = super.updateValue(value, flags);
+    if (changed && this.refs.wrapper) {
+      //add/remove selected option class
+      const value = this.dataValue;
+      const optionSelectedClass = 'radio-selected';
+
+      this.refs.wrapper.forEach((wrapper, index) => {
+        const input = this.refs.input[index];
+        if (input && input.value.toString() === value.toString()) {
+          //add class to container when selected
+          this.addClass(wrapper, optionSelectedClass);
+        }
+        else {
+          this.removeClass(wrapper, optionSelectedClass);
+        }
+      });
+    }
+
+    if (!flags || !flags.modified || !this.isRadio) {
+      return changed;
+    }
+
+    // If they clicked on the radio that is currently selected, it needs to reset the value.
+    this.currentValue = this.dataValue;
+    const shouldResetValue = !(flags && flags.noUpdateEvent)
+      && this.previousValue === this.currentValue;
+    if (shouldResetValue) {
+      this.resetValue();
+      this.triggerChange();
+    }
+    this.previousValue = this.dataValue;
+    return changed;
+  }
+
+  /**
+   * Normalize values coming into updateValue.
+   *
+   * @param value
+   * @return {*}
+   */
+  normalizeValue(value) {
+    const dataType = _.get(this.component, 'dataType', 'auto');
+    switch (dataType) {
+      case 'auto':
+        if (!isNaN(parseFloat(value)) && isFinite(value)) {
+          value = +value;
+        }
+        if (value === 'true') {
+          value = true;
+        }
+        if (value === 'false') {
+          value = false;
+        }
+        break;
+      case 'number':
+        value = +value;
+        break;
+      case 'string':
+        if (typeof value === 'object') {
+          value = JSON.stringify(value);
+        }
+        else {
+          value = value.toString();
+        }
+        break;
+      case 'boolean':
+        value = !(!value || value.toString() === 'false');
+        break;
+    }
+    return super.normalizeValue(value);
+  }
+}
+>>>>>>> newFormio

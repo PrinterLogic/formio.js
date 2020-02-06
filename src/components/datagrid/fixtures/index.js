@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37,3 +38,9 @@ var _compWithDefValue = _interopRequireDefault(require("./comp-with-def-value.js
 var _compRowGroupsWithDefValue = _interopRequireDefault(require("./comp-row-groups-with-def-value.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+=======
+export comp1 from './comp1';
+export comp2 from './comp2';
+export withDefValue from './comp-with-def-value';
+export withRowGroupsAndDefValue from './comp-row-groups-with-def-value';
+>>>>>>> newFormio

@@ -1,6 +1,30 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
+=======
+import Input from '../_classes/input/Input';
+
+export default class HiddenComponent extends Input {
+  static schema(...extend) {
+    return Input.schema({
+      type: 'hidden',
+      tableView: false,
+      inputType: 'hidden'
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Hidden',
+      group: 'data',
+      icon: 'user-secret',
+      weight: 0,
+      documentation: 'http://help.form.io/userguide/#hidden',
+      schema: HiddenComponent.schema()
+    };
+  }
+>>>>>>> newFormio
 
 require("core-js/modules/es.symbol.description");
 
@@ -43,6 +67,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+<<<<<<< HEAD
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
@@ -138,3 +163,39 @@ function (_BaseComponent) {
 }(_Base.default);
 
 exports.default = HiddenComponent;
+=======
+  get inputInfo() {
+    const info = super.elementInfo();
+    info.type = 'input';
+    info.attr.type = 'hidden';
+    info.changeEvent = 'change';
+    return info;
+  }
+
+  /**
+   * Check if a component is eligible for multiple validation
+   *
+   * @return {boolean}
+   */
+  validateMultiple() {
+    // Since "arrays" are able to be stored in hidden components, we need to turn off multiple validation.
+    return false;
+  }
+
+  labelIsHidden() {
+    return true;
+  }
+
+  get emptyValue() {
+    return '';
+  }
+
+  setValue(value, flags) {
+    return this.updateValue(value, flags);
+  }
+
+  getValue() {
+    return this.dataValue;
+  }
+}
+>>>>>>> newFormio

@@ -65,6 +65,7 @@ function (_TextFieldComponent) {
         extend[_key] = arguments[_key];
       }
 
+<<<<<<< HEAD
       return _TextField.default.schema.apply(_TextField.default, [{
         type: 'email',
         label: 'Email',
@@ -91,6 +92,23 @@ function (_TextFieldComponent) {
 
   function EmailComponent(component, options, data) {
     var _this;
+=======
+  static get builderInfo() {
+    return {
+      title: 'Email',
+      group: 'advanced',
+      icon: 'at',
+      documentation: 'http://help.form.io/userguide/#email',
+      weight: 10,
+      schema: EmailComponent.schema()
+    };
+  }
+
+  init() {
+    super.init();
+    this.validators.push('email');
+  }
+>>>>>>> newFormio
 
     _classCallCheck(this, EmailComponent);
 
@@ -98,7 +116,14 @@ function (_TextFieldComponent) {
 
     _this.validators.push('email');
 
+<<<<<<< HEAD
     return _this;
+=======
+  get inputInfo() {
+    const info = super.inputInfo;
+    info.attr.type = this.component.mask ? 'password' : 'email';
+    return info;
+>>>>>>> newFormio
   }
 
   _createClass(EmailComponent, [{

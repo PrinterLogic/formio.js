@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -116,10 +117,44 @@ function (_SelectComponent) {
     _this.component.dataSrc = 'resource';
     _this.component.data = {
       resource: _this.component.resource
+=======
+import SelectComponent from '../select/Select';
+
+export default class ResourceComponent extends SelectComponent {
+  static schema(...extend) {
+    return SelectComponent.schema({
+      type: 'resource',
+      label: 'Resource',
+      key: 'resource',
+      dataSrc: 'resource',
+      resource: '',
+      project: '',
+      template: '<span>{{ item.data }}</span>',
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Resource',
+      group: 'premium',
+      icon: 'files-o',
+      weight: 90,
+      documentation: 'http://help.form.io/userguide/#resource',
+      schema: ResourceComponent.schema(),
+    };
+  }
+
+  init() {
+    super.init();
+    this.component.dataSrc = 'resource';
+    this.component.data = {
+      resource: this.component.resource,
+>>>>>>> newFormio
     };
     return _this;
   }
 
+<<<<<<< HEAD
   _createClass(ResourceComponent, [{
     key: "addButton",
 
@@ -191,3 +226,9 @@ function (_SelectComponent) {
 }(_Select.default);
 
 exports.default = ResourceComponent;
+=======
+  get defaultSchema() {
+    return ResourceComponent.schema();
+  }
+}
+>>>>>>> newFormio

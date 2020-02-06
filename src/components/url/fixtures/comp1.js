@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5,12 +6,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _default = {
+=======
+export default {
+>>>>>>> newFormio
   'conditional': {
     'eq': '',
     'when': null,
     'show': ''
   },
+<<<<<<< HEAD
   'tags': [],
+=======
+  'tags': [
+
+  ],
+>>>>>>> newFormio
   'type': 'url',
   'kickbox': {
     'enabled': false
@@ -28,4 +38,7 @@ var _default = {
   'tableView': true,
   'input': true
 };
+<<<<<<< HEAD
 exports.default = _default;
+=======
+>>>>>>> newFormio

@@ -1,28 +1,44 @@
 {
   "type": "File",
   "start": 0,
+<<<<<<< HEAD
   "end": 885,
+=======
+  "end": 913,
+>>>>>>> newFormio
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
+<<<<<<< HEAD
       "line": 36,
+=======
+      "line": 37,
+>>>>>>> newFormio
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
+<<<<<<< HEAD
     "end": 885,
+=======
+    "end": 913,
+>>>>>>> newFormio
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
+<<<<<<< HEAD
         "line": 36,
+=======
+        "line": 37,
+>>>>>>> newFormio
         "column": 0
       }
     },
@@ -31,28 +47,44 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 0,
+<<<<<<< HEAD
         "end": 884,
+=======
+        "end": 912,
+>>>>>>> newFormio
         "loc": {
           "start": {
             "line": 1,
             "column": 0
           },
           "end": {
+<<<<<<< HEAD
             "line": 35,
+=======
+            "line": 36,
+>>>>>>> newFormio
             "column": 2
           }
         },
         "declaration": {
           "type": "ArrayExpression",
           "start": 15,
+<<<<<<< HEAD
           "end": 883,
+=======
+          "end": 911,
+>>>>>>> newFormio
           "loc": {
             "start": {
               "line": 1,
               "column": 15
             },
             "end": {
+<<<<<<< HEAD
               "line": 35,
+=======
+              "line": 36,
+>>>>>>> newFormio
               "column": 1
             }
           },
@@ -60,14 +92,22 @@
             {
               "type": "ObjectExpression",
               "start": 19,
+<<<<<<< HEAD
               "end": 388,
+=======
+              "end": 416,
+>>>>>>> newFormio
               "loc": {
                 "start": {
                   "line": 2,
                   "column": 2
                 },
                 "end": {
+<<<<<<< HEAD
                   "line": 17,
+=======
+                  "line": 18,
+>>>>>>> newFormio
                   "column": 3
                 }
               },
@@ -343,7 +383,11 @@
                 {
                   "type": "ObjectProperty",
                   "start": 154,
+<<<<<<< HEAD
                   "end": 174,
+=======
+                  "end": 181,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 9,
@@ -351,7 +395,11 @@
                     },
                     "end": {
                       "line": 9,
+<<<<<<< HEAD
                       "column": 24
+=======
+                      "column": 31
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -369,6 +417,7 @@
                       "end": {
                         "line": 9,
                         "column": 15
+<<<<<<< HEAD
                       },
                       "identifierName": "searchField"
                     },
@@ -424,13 +473,16 @@
                       "end": {
                         "line": 10,
                         "column": 12
+=======
+>>>>>>> newFormio
                       },
-                      "identifierName": "template"
+                      "identifierName": "searchField"
                     },
-                    "name": "template"
+                    "name": "searchField"
                   },
                   "value": {
                     "type": "StringLiteral",
+<<<<<<< HEAD
                     "start": 190,
                     "end": 221,
                     "loc": {
@@ -441,6 +493,106 @@
                       "end": {
                         "line": 10,
                         "column": 45
+=======
+                    "start": 167,
+                    "end": 181,
+                    "loc": {
+                      "start": {
+                        "line": 9,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 31
+>>>>>>> newFormio
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "title__regex",
+                      "raw": "'title__regex'"
+                    },
+                    "value": "title__regex"
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+<<<<<<< HEAD
+                  "start": 227,
+                  "end": 247,
+=======
+                  "start": 187,
+                  "end": 228,
+>>>>>>> newFormio
+                  "loc": {
+                    "start": {
+                      "line": 11,
+                      "column": 4
+                    },
+                    "end": {
+<<<<<<< HEAD
+                      "line": 11,
+                      "column": 24
+=======
+                      "line": 10,
+                      "column": 45
+>>>>>>> newFormio
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+<<<<<<< HEAD
+                    "start": 227,
+                    "end": 240,
+=======
+                    "start": 187,
+                    "end": 195,
+>>>>>>> newFormio
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 4
+                      },
+                      "end": {
+<<<<<<< HEAD
+                        "line": 11,
+                        "column": 17
+=======
+                        "line": 10,
+                        "column": 12
+>>>>>>> newFormio
+                      },
+                      "identifierName": "template"
+                    },
+                    "name": "template"
+                  },
+                  "value": {
+                    "type": "StringLiteral",
+<<<<<<< HEAD
+                    "start": 242,
+                    "end": 247,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 19
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 24
+=======
+                    "start": 197,
+                    "end": 228,
+                    "loc": {
+                      "start": {
+                        "line": 10,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 10,
+                        "column": 45
+>>>>>>> newFormio
                       }
                     },
                     "extra": {
@@ -452,69 +604,20 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 227,
-                  "end": 247,
-                  "loc": {
-                    "start": {
-                      "line": 11,
-                      "column": 4
-                    },
-                    "end": {
-                      "line": 11,
-                      "column": 24
-                    }
-                  },
-                  "method": false,
-                  "shorthand": false,
-                  "computed": false,
-                  "key": {
-                    "type": "Identifier",
-                    "start": 227,
-                    "end": 240,
-                    "loc": {
-                      "start": {
-                        "line": 11,
-                        "column": 4
-                      },
-                      "end": {
-                        "line": 11,
-                        "column": 17
-                      },
-                      "identifierName": "valueProperty"
-                    },
-                    "name": "valueProperty"
-                  },
-                  "value": {
-                    "type": "StringLiteral",
-                    "start": 242,
-                    "end": 247,
-                    "loc": {
-                      "start": {
-                        "line": 11,
-                        "column": 19
-                      },
-                      "end": {
-                        "line": 11,
-                        "column": 24
-                      }
-                    },
-                    "extra": {
-                      "rawValue": "_id",
-                      "raw": "'_id'"
-                    },
-                    "value": "_id"
-                  }
-                },
-                {
-                  "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 253,
                   "end": 271,
+=======
+                  "start": 234,
+                  "end": 254,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 12,
                       "column": 4
                     },
                     "end": {
+<<<<<<< HEAD
                       "line": 12,
                       "column": 22
                     }
@@ -568,6 +671,10 @@
                     "end": {
                       "line": 13,
                       "column": 17
+=======
+                      "line": 11,
+                      "column": 24
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -575,23 +682,34 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 277,
                     "end": 282,
+=======
+                    "start": 234,
+                    "end": 247,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 13,
                         "column": 4
                       },
                       "end": {
+<<<<<<< HEAD
                         "line": 13,
                         "column": 9
+=======
+                        "line": 11,
+                        "column": 17
+>>>>>>> newFormio
                       },
-                      "identifierName": "label"
+                      "identifierName": "valueProperty"
                     },
-                    "name": "label"
+                    "name": "valueProperty"
                   },
                   "value": {
                     "type": "StringLiteral",
+<<<<<<< HEAD
                     "start": 284,
                     "end": 290,
                     "loc": {
@@ -602,27 +720,49 @@
                       "end": {
                         "line": 13,
                         "column": 17
+=======
+                    "start": 249,
+                    "end": 254,
+                    "loc": {
+                      "start": {
+                        "line": 11,
+                        "column": 19
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 24
+>>>>>>> newFormio
                       }
                     },
                     "extra": {
-                      "rawValue": "Form",
-                      "raw": "'Form'"
+                      "rawValue": "_id",
+                      "raw": "'_id'"
                     },
-                    "value": "Form"
+                    "value": "_id"
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 296,
                   "end": 307,
+=======
+                  "start": 260,
+                  "end": 278,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 14,
                       "column": 4
                     },
                     "end": {
+<<<<<<< HEAD
                       "line": 14,
                       "column": 15
+=======
+                      "line": 12,
+                      "column": 22
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -630,22 +770,33 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 296,
                     "end": 299,
+=======
+                    "start": 260,
+                    "end": 272,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 14,
                         "column": 4
                       },
                       "end": {
+<<<<<<< HEAD
                         "line": 14,
                         "column": 7
+=======
+                        "line": 12,
+                        "column": 16
+>>>>>>> newFormio
                       },
-                      "identifierName": "key"
+                      "identifierName": "authenticate"
                     },
-                    "name": "key"
+                    "name": "authenticate"
                   },
                   "value": {
+<<<<<<< HEAD
                     "type": "StringLiteral",
                     "start": 301,
                     "end": 307,
@@ -657,27 +808,46 @@
                       "end": {
                         "line": 14,
                         "column": 15
+=======
+                    "type": "BooleanLiteral",
+                    "start": 274,
+                    "end": 278,
+                    "loc": {
+                      "start": {
+                        "line": 12,
+                        "column": 18
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 22
+>>>>>>> newFormio
                       }
                     },
-                    "extra": {
-                      "rawValue": "form",
-                      "raw": "'form'"
-                    },
-                    "value": "form"
+                    "value": true
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 313,
                   "end": 323,
+=======
+                  "start": 284,
+                  "end": 297,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 15,
                       "column": 4
                     },
                     "end": {
+<<<<<<< HEAD
                       "line": 15,
                       "column": 14
+=======
+                      "line": 13,
+                      "column": 17
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -685,22 +855,33 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 313,
                     "end": 319,
+=======
+                    "start": 284,
+                    "end": 289,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 15,
                         "column": 4
                       },
                       "end": {
+<<<<<<< HEAD
                         "line": 15,
                         "column": 10
+=======
+                        "line": 13,
+                        "column": 9
+>>>>>>> newFormio
                       },
-                      "identifierName": "weight"
+                      "identifierName": "label"
                     },
-                    "name": "weight"
+                    "name": "label"
                   },
                   "value": {
+<<<<<<< HEAD
                     "type": "NumericLiteral",
                     "start": 321,
                     "end": 323,
@@ -712,27 +893,50 @@
                       "end": {
                         "line": 15,
                         "column": 14
+=======
+                    "type": "StringLiteral",
+                    "start": 291,
+                    "end": 297,
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 11
+                      },
+                      "end": {
+                        "line": 13,
+                        "column": 17
+>>>>>>> newFormio
                       }
                     },
                     "extra": {
-                      "rawValue": 10,
-                      "raw": "10"
+                      "rawValue": "Form",
+                      "raw": "'Form'"
                     },
-                    "value": 10
+                    "value": "Form"
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 329,
                   "end": 384,
+=======
+                  "start": 303,
+                  "end": 314,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 16,
                       "column": 4
                     },
                     "end": {
+<<<<<<< HEAD
                       "line": 16,
                       "column": 59
+=======
+                      "line": 14,
+                      "column": 15
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -740,23 +944,34 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 329,
                     "end": 336,
+=======
+                    "start": 303,
+                    "end": 306,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 16,
                         "column": 4
                       },
                       "end": {
+<<<<<<< HEAD
                         "line": 16,
                         "column": 11
+=======
+                        "line": 14,
+                        "column": 7
+>>>>>>> newFormio
                       },
-                      "identifierName": "tooltip"
+                      "identifierName": "key"
                     },
-                    "name": "tooltip"
+                    "name": "key"
                   },
                   "value": {
                     "type": "StringLiteral",
+<<<<<<< HEAD
                     "start": 338,
                     "end": 384,
                     "loc": {
@@ -767,14 +982,27 @@
                       "end": {
                         "line": 16,
                         "column": 59
+=======
+                    "start": 308,
+                    "end": 314,
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 15
+>>>>>>> newFormio
                       }
                     },
                     "extra": {
-                      "rawValue": "The form to load within this form component.",
-                      "raw": "'The form to load within this form component.'"
+                      "rawValue": "form",
+                      "raw": "'form'"
                     },
-                    "value": "The form to load within this form component."
+                    "value": "form"
                   }
+<<<<<<< HEAD
                 }
               ]
             },
@@ -805,6 +1033,21 @@
                     "end": {
                       "line": 19,
                       "column": 21
+=======
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 320,
+                  "end": 330,
+                  "loc": {
+                    "start": {
+                      "line": 15,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 14
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -812,6 +1055,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 398,
                     "end": 402,
                     "loc": {
@@ -822,12 +1066,25 @@
                       "end": {
                         "line": 19,
                         "column": 8
+=======
+                    "start": 320,
+                    "end": 326,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 4
                       },
-                      "identifierName": "type"
+                      "end": {
+                        "line": 15,
+                        "column": 10
+>>>>>>> newFormio
+                      },
+                      "identifierName": "weight"
                     },
-                    "name": "type"
+                    "name": "weight"
                   },
                   "value": {
+<<<<<<< HEAD
                     "type": "StringLiteral",
                     "start": 404,
                     "end": 415,
@@ -846,10 +1103,31 @@
                       "raw": "'textfield'"
                     },
                     "value": "textfield"
+=======
+                    "type": "NumericLiteral",
+                    "start": 328,
+                    "end": 330,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 14
+                      }
+                    },
+                    "extra": {
+                      "rawValue": 10,
+                      "raw": "10"
+                    },
+                    "value": 10
+>>>>>>> newFormio
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 421,
                   "end": 432,
                   "loc": {
@@ -860,6 +1138,18 @@
                     "end": {
                       "line": 20,
                       "column": 15
+=======
+                  "start": 336,
+                  "end": 351,
+                  "loc": {
+                    "start": {
+                      "line": 16,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 19
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -867,6 +1157,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 421,
                     "end": 426,
                     "loc": {
@@ -877,13 +1168,26 @@
                       "end": {
                         "line": 20,
                         "column": 9
+=======
+                    "start": 336,
+                    "end": 344,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 4
                       },
-                      "identifierName": "input"
+                      "end": {
+                        "line": 16,
+                        "column": 12
+>>>>>>> newFormio
+                      },
+                      "identifierName": "lazyLoad"
                     },
-                    "name": "input"
+                    "name": "lazyLoad"
                   },
                   "value": {
                     "type": "BooleanLiteral",
+<<<<<<< HEAD
                     "start": 428,
                     "end": 432,
                     "loc": {
@@ -894,13 +1198,26 @@
                       "end": {
                         "line": 20,
                         "column": 15
+=======
+                    "start": 346,
+                    "end": 351,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 19
+>>>>>>> newFormio
                       }
                     },
-                    "value": true
+                    "value": false
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 438,
                   "end": 460,
                   "loc": {
@@ -911,6 +1228,18 @@
                     "end": {
                       "line": 21,
                       "column": 26
+=======
+                  "start": 357,
+                  "end": 412,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 59
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -918,6 +1247,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 438,
                     "end": 443,
                     "loc": {
@@ -952,20 +1282,83 @@
                       "raw": "'Form Revision'"
                     },
                     "value": "Form Revision"
+=======
+                    "start": 357,
+                    "end": 364,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 11
+                      },
+                      "identifierName": "tooltip"
+                    },
+                    "name": "tooltip"
+                  },
+                  "value": {
+                    "type": "StringLiteral",
+                    "start": 366,
+                    "end": 412,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 13
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 59
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "The form to load within this form component.",
+                      "raw": "'The form to load within this form component.'"
+                    },
+                    "value": "The form to load within this form component."
+>>>>>>> newFormio
                   }
+                }
+              ]
+            },
+            {
+              "type": "ObjectExpression",
+              "start": 420,
+              "end": 668,
+              "loc": {
+                "start": {
+                  "line": 19,
+                  "column": 2
                 },
+                "end": {
+                  "line": 27,
+                  "column": 3
+                }
+              },
+              "properties": [
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 466,
                   "end": 488,
+=======
+                  "start": 426,
+                  "end": 443,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 22,
                       "column": 4
                     },
                     "end": {
+<<<<<<< HEAD
                       "line": 22,
                       "column": 26
+=======
+                      "line": 20,
+                      "column": 21
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -973,14 +1366,20 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 466,
                     "end": 477,
+=======
+                    "start": 426,
+                    "end": 430,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 22,
                         "column": 4
                       },
                       "end": {
+<<<<<<< HEAD
                         "line": 22,
                         "column": 15
                       },
@@ -1007,20 +1406,58 @@
                       "raw": "'Current'"
                     },
                     "value": "Current"
+=======
+                        "line": 20,
+                        "column": 8
+                      },
+                      "identifierName": "type"
+                    },
+                    "name": "type"
+                  },
+                  "value": {
+                    "type": "StringLiteral",
+                    "start": 432,
+                    "end": 443,
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 10
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 21
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "textfield",
+                      "raw": "'textfield'"
+                    },
+                    "value": "textfield"
+>>>>>>> newFormio
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 494,
                   "end": 594,
+=======
+                  "start": 449,
+                  "end": 460,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 23,
                       "column": 4
                     },
                     "end": {
+<<<<<<< HEAD
                       "line": 23,
                       "column": 104
+=======
+                      "line": 21,
+                      "column": 15
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -1028,8 +1465,13 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 494,
                     "end": 501,
+=======
+                    "start": 449,
+                    "end": 454,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 23,
@@ -1039,6 +1481,7 @@
                         "line": 23,
                         "column": 11
                       },
+<<<<<<< HEAD
                       "identifierName": "tooltip"
                     },
                     "name": "tooltip"
@@ -1047,12 +1490,23 @@
                     "type": "StringLiteral",
                     "start": 503,
                     "end": 594,
+=======
+                      "identifierName": "input"
+                    },
+                    "name": "input"
+                  },
+                  "value": {
+                    "type": "BooleanLiteral",
+                    "start": 456,
+                    "end": 460,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 23,
                         "column": 13
                       },
                       "end": {
+<<<<<<< HEAD
                         "line": 23,
                         "column": 104
                       }
@@ -1062,20 +1516,37 @@
                       "raw": "'You can lock the nested form to a specific revision by entering the revision number here.'"
                     },
                     "value": "You can lock the nested form to a specific revision by entering the revision number here."
+=======
+                        "line": 21,
+                        "column": 15
+                      }
+                    },
+                    "value": true
+>>>>>>> newFormio
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 600,
                   "end": 619,
+=======
+                  "start": 466,
+                  "end": 488,
+>>>>>>> newFormio
                   "loc": {
                     "start": {
                       "line": 24,
                       "column": 4
                     },
                     "end": {
+<<<<<<< HEAD
                       "line": 24,
                       "column": 23
+=======
+                      "line": 22,
+                      "column": 26
+>>>>>>> newFormio
                     }
                   },
                   "method": false,
@@ -1083,14 +1554,20 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 600,
                     "end": 603,
+=======
+                    "start": 466,
+                    "end": 471,
+>>>>>>> newFormio
                     "loc": {
                       "start": {
                         "line": 24,
                         "column": 4
                       },
                       "end": {
+<<<<<<< HEAD
                         "line": 24,
                         "column": 7
                       },
@@ -1117,20 +1594,52 @@
                       "raw": "'formRevision'"
                     },
                     "value": "formRevision"
+=======
+                        "line": 22,
+                        "column": 9
+                      },
+                      "identifierName": "label"
+                    },
+                    "name": "label"
+                  },
+                  "value": {
+                    "type": "StringLiteral",
+                    "start": 473,
+                    "end": 488,
+                    "loc": {
+                      "start": {
+                        "line": 22,
+                        "column": 11
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 26
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "Form Revision",
+                      "raw": "'Form Revision'"
+                    },
+                    "value": "Form Revision"
+>>>>>>> newFormio
                   }
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 625,
                   "end": 635,
+=======
+                  "start": 494,
+                  "end": 516,
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 23,
                       "column": 4
                     },
                     "end": {
-                      "line": 25,
-                      "column": 14
+                      "line": 23,
+                      "column": 26
                     }
                   },
                   "method": false,
@@ -1138,7 +1647,126 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+                    "start": 494,
+                    "end": 505,
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 15
+                      },
+                      "identifierName": "placeholder"
+                    },
+                    "name": "placeholder"
+                  },
+                  "value": {
+                    "type": "StringLiteral",
+                    "start": 507,
+                    "end": 516,
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 17
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 26
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "Current",
+                      "raw": "'Current'"
+                    },
+                    "value": "Current"
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 522,
+                  "end": 622,
+                  "loc": {
+                    "start": {
+                      "line": 24,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 24,
+                      "column": 104
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 522,
+                    "end": 529,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 11
+                      },
+                      "identifierName": "tooltip"
+                    },
+                    "name": "tooltip"
+                  },
+                  "value": {
+                    "type": "StringLiteral",
+                    "start": 531,
+                    "end": 622,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 13
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 104
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "You can lock the nested form to a specific revision by entering the revision number here.",
+                      "raw": "'You can lock the nested form to a specific revision by entering the revision number here.'"
+                    },
+                    "value": "You can lock the nested form to a specific revision by entering the revision number here."
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 628,
+                  "end": 647,
+>>>>>>> newFormio
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 25,
+<<<<<<< HEAD
+                      "column": 14
+=======
+                      "column": 23
+>>>>>>> newFormio
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+<<<<<<< HEAD
                     "start": 625,
+=======
+                    "start": 628,
+>>>>>>> newFormio
                     "end": 631,
                     "loc": {
                       "start": {
@@ -1147,6 +1775,64 @@
                       },
                       "end": {
                         "line": 25,
+<<<<<<< HEAD
+=======
+                        "column": 7
+                      },
+                      "identifierName": "key"
+                    },
+                    "name": "key"
+                  },
+                  "value": {
+                    "type": "StringLiteral",
+                    "start": 633,
+                    "end": 647,
+                    "loc": {
+                      "start": {
+                        "line": 25,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 25,
+                        "column": 23
+                      }
+                    },
+                    "extra": {
+                      "rawValue": "formRevision",
+                      "raw": "'formRevision'"
+                    },
+                    "value": "formRevision"
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 653,
+                  "end": 663,
+                  "loc": {
+                    "start": {
+                      "line": 26,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 14
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 653,
+                    "end": 659,
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 26,
+>>>>>>> newFormio
                         "column": 10
                       },
                       "identifierName": "weight"
@@ -1155,6 +1841,7 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
+<<<<<<< HEAD
                     "start": 633,
                     "end": 635,
                     "loc": {
@@ -1164,6 +1851,17 @@
                       },
                       "end": {
                         "line": 25,
+=======
+                    "start": 661,
+                    "end": 663,
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 26,
+>>>>>>> newFormio
                         "column": 14
                       }
                     },
@@ -1178,6 +1876,7 @@
             },
             {
               "type": "ObjectExpression",
+<<<<<<< HEAD
               "start": 644,
               "end": 881,
               "loc": {
@@ -1187,12 +1886,24 @@
                 },
                 "end": {
                   "line": 34,
+=======
+              "start": 672,
+              "end": 909,
+              "loc": {
+                "start": {
+                  "line": 28,
+                  "column": 2
+                },
+                "end": {
+                  "line": 35,
+>>>>>>> newFormio
                   "column": 3
                 }
               },
               "properties": [
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 650,
                   "end": 666,
                   "loc": {
@@ -1202,6 +1913,17 @@
                     },
                     "end": {
                       "line": 28,
+=======
+                  "start": 678,
+                  "end": 694,
+                  "loc": {
+                    "start": {
+                      "line": 29,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 29,
+>>>>>>> newFormio
                       "column": 20
                     }
                   },
@@ -1210,6 +1932,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 650,
                     "end": 654,
                     "loc": {
@@ -1219,6 +1942,17 @@
                       },
                       "end": {
                         "line": 28,
+=======
+                    "start": 678,
+                    "end": 682,
+                    "loc": {
+                      "start": {
+                        "line": 29,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 29,
+>>>>>>> newFormio
                         "column": 8
                       },
                       "identifierName": "type"
@@ -1227,6 +1961,7 @@
                   },
                   "value": {
                     "type": "StringLiteral",
+<<<<<<< HEAD
                     "start": 656,
                     "end": 666,
                     "loc": {
@@ -1236,6 +1971,17 @@
                       },
                       "end": {
                         "line": 28,
+=======
+                    "start": 684,
+                    "end": 694,
+                    "loc": {
+                      "start": {
+                        "line": 29,
+                        "column": 10
+                      },
+                      "end": {
+                        "line": 29,
+>>>>>>> newFormio
                         "column": 20
                       }
                     },
@@ -1248,6 +1994,7 @@
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 672,
                   "end": 683,
                   "loc": {
@@ -1257,6 +2004,17 @@
                     },
                     "end": {
                       "line": 29,
+=======
+                  "start": 700,
+                  "end": 711,
+                  "loc": {
+                    "start": {
+                      "line": 30,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 30,
+>>>>>>> newFormio
                       "column": 15
                     }
                   },
@@ -1265,6 +2023,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 672,
                     "end": 677,
                     "loc": {
@@ -1274,6 +2033,17 @@
                       },
                       "end": {
                         "line": 29,
+=======
+                    "start": 700,
+                    "end": 705,
+                    "loc": {
+                      "start": {
+                        "line": 30,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 30,
+>>>>>>> newFormio
                         "column": 9
                       },
                       "identifierName": "input"
@@ -1282,6 +2052,7 @@
                   },
                   "value": {
                     "type": "BooleanLiteral",
+<<<<<<< HEAD
                     "start": 679,
                     "end": 683,
                     "loc": {
@@ -1291,6 +2062,17 @@
                       },
                       "end": {
                         "line": 29,
+=======
+                    "start": 707,
+                    "end": 711,
+                    "loc": {
+                      "start": {
+                        "line": 30,
+                        "column": 11
+                      },
+                      "end": {
+                        "line": 30,
+>>>>>>> newFormio
                         "column": 15
                       }
                     },
@@ -1299,6 +2081,7 @@
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 689,
                   "end": 699,
                   "loc": {
@@ -1308,6 +2091,17 @@
                     },
                     "end": {
                       "line": 30,
+=======
+                  "start": 717,
+                  "end": 727,
+                  "loc": {
+                    "start": {
+                      "line": 31,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 31,
+>>>>>>> newFormio
                       "column": 14
                     }
                   },
@@ -1316,6 +2110,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 689,
                     "end": 695,
                     "loc": {
@@ -1325,6 +2120,17 @@
                       },
                       "end": {
                         "line": 30,
+=======
+                    "start": 717,
+                    "end": 723,
+                    "loc": {
+                      "start": {
+                        "line": 31,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 31,
+>>>>>>> newFormio
                         "column": 10
                       },
                       "identifierName": "weight"
@@ -1333,6 +2139,7 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
+<<<<<<< HEAD
                     "start": 697,
                     "end": 699,
                     "loc": {
@@ -1342,6 +2149,17 @@
                       },
                       "end": {
                         "line": 30,
+=======
+                    "start": 725,
+                    "end": 727,
+                    "loc": {
+                      "start": {
+                        "line": 31,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 31,
+>>>>>>> newFormio
                         "column": 14
                       }
                     },
@@ -1354,6 +2172,7 @@
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 705,
                   "end": 721,
                   "loc": {
@@ -1363,6 +2182,17 @@
                     },
                     "end": {
                       "line": 31,
+=======
+                  "start": 733,
+                  "end": 749,
+                  "loc": {
+                    "start": {
+                      "line": 32,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 32,
+>>>>>>> newFormio
                       "column": 20
                     }
                   },
@@ -1371,6 +2201,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 705,
                     "end": 708,
                     "loc": {
@@ -1380,6 +2211,17 @@
                       },
                       "end": {
                         "line": 31,
+=======
+                    "start": 733,
+                    "end": 736,
+                    "loc": {
+                      "start": {
+                        "line": 32,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 32,
+>>>>>>> newFormio
                         "column": 7
                       },
                       "identifierName": "key"
@@ -1388,6 +2230,7 @@
                   },
                   "value": {
                     "type": "StringLiteral",
+<<<<<<< HEAD
                     "start": 710,
                     "end": 721,
                     "loc": {
@@ -1397,6 +2240,17 @@
                       },
                       "end": {
                         "line": 31,
+=======
+                    "start": 738,
+                    "end": 749,
+                    "loc": {
+                      "start": {
+                        "line": 32,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 32,
+>>>>>>> newFormio
                         "column": 20
                       }
                     },
@@ -1409,6 +2263,7 @@
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 727,
                   "end": 753,
                   "loc": {
@@ -1418,6 +2273,17 @@
                     },
                     "end": {
                       "line": 32,
+=======
+                  "start": 755,
+                  "end": 781,
+                  "loc": {
+                    "start": {
+                      "line": 33,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 33,
+>>>>>>> newFormio
                       "column": 30
                     }
                   },
@@ -1426,6 +2292,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 727,
                     "end": 732,
                     "loc": {
@@ -1435,6 +2302,17 @@
                       },
                       "end": {
                         "line": 32,
+=======
+                    "start": 755,
+                    "end": 760,
+                    "loc": {
+                      "start": {
+                        "line": 33,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 33,
+>>>>>>> newFormio
                         "column": 9
                       },
                       "identifierName": "label"
@@ -1443,6 +2321,7 @@
                   },
                   "value": {
                     "type": "StringLiteral",
+<<<<<<< HEAD
                     "start": 734,
                     "end": 753,
                     "loc": {
@@ -1452,6 +2331,17 @@
                       },
                       "end": {
                         "line": 32,
+=======
+                    "start": 762,
+                    "end": 781,
+                    "loc": {
+                      "start": {
+                        "line": 33,
+                        "column": 11
+                      },
+                      "end": {
+                        "line": 33,
+>>>>>>> newFormio
                         "column": 30
                       }
                     },
@@ -1464,6 +2354,7 @@
                 },
                 {
                   "type": "ObjectProperty",
+<<<<<<< HEAD
                   "start": 759,
                   "end": 877,
                   "loc": {
@@ -1473,6 +2364,17 @@
                     },
                     "end": {
                       "line": 33,
+=======
+                  "start": 787,
+                  "end": 905,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 34,
+>>>>>>> newFormio
                       "column": 122
                     }
                   },
@@ -1481,6 +2383,7 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
+<<<<<<< HEAD
                     "start": 759,
                     "end": 766,
                     "loc": {
@@ -1490,6 +2393,17 @@
                       },
                       "end": {
                         "line": 33,
+=======
+                    "start": 787,
+                    "end": 794,
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 4
+                      },
+                      "end": {
+                        "line": 34,
+>>>>>>> newFormio
                         "column": 11
                       },
                       "identifierName": "tooltip"
@@ -1498,6 +2412,7 @@
                   },
                   "value": {
                     "type": "StringLiteral",
+<<<<<<< HEAD
                     "start": 768,
                     "end": 877,
                     "loc": {
@@ -1507,6 +2422,17 @@
                       },
                       "end": {
                         "line": 33,
+=======
+                    "start": 796,
+                    "end": 905,
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 13
+                      },
+                      "end": {
+                        "line": 34,
+>>>>>>> newFormio
                         "column": 122
                       }
                     },
@@ -2224,9 +3150,15 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "value": "title",
       "start": 167,
       "end": 174,
+=======
+      "value": "title__regex",
+      "start": 167,
+      "end": 181,
+>>>>>>> newFormio
       "loc": {
         "start": {
           "line": 9,
@@ -2234,7 +3166,11 @@
         },
         "end": {
           "line": 9,
+<<<<<<< HEAD
           "column": 24
+=======
+          "column": 31
+>>>>>>> newFormio
         }
       }
     },
@@ -2251,6 +3187,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 174,
       "end": 175,
       "loc": {
@@ -2261,6 +3198,18 @@
         "end": {
           "line": 9,
           "column": 25
+=======
+      "start": 181,
+      "end": 182,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 31
+        },
+        "end": {
+          "line": 9,
+          "column": 32
+>>>>>>> newFormio
         }
       }
     },
@@ -2277,8 +3226,13 @@
         "binop": null
       },
       "value": "template",
+<<<<<<< HEAD
       "start": 180,
       "end": 188,
+=======
+      "start": 187,
+      "end": 195,
+>>>>>>> newFormio
       "loc": {
         "start": {
           "line": 10,
@@ -2303,8 +3257,13 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 188,
       "end": 189,
+=======
+      "start": 195,
+      "end": 196,
+>>>>>>> newFormio
       "loc": {
         "start": {
           "line": 10,
@@ -2330,8 +3289,13 @@
         "updateContext": null
       },
       "value": "<span>{{ item.title }}</span>",
+<<<<<<< HEAD
       "start": 190,
       "end": 221,
+=======
+      "start": 197,
+      "end": 228,
+>>>>>>> newFormio
       "loc": {
         "start": {
           "line": 10,
@@ -2356,8 +3320,13 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 221,
       "end": 222,
+=======
+      "start": 228,
+      "end": 229,
+>>>>>>> newFormio
       "loc": {
         "start": {
           "line": 10,
@@ -2382,8 +3351,13 @@
         "binop": null
       },
       "value": "valueProperty",
+<<<<<<< HEAD
       "start": 227,
       "end": 240,
+=======
+      "start": 234,
+      "end": 247,
+>>>>>>> newFormio
       "loc": {
         "start": {
           "line": 11,
@@ -2396,6 +3370,8 @@
       }
     },
     {
+<<<<<<< HEAD
+=======
       "type": {
         "label": ":",
         "beforeExpr": true,
@@ -2408,8 +3384,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 240,
-      "end": 241,
+      "start": 247,
+      "end": 248,
       "loc": {
         "start": {
           "line": 11,
@@ -2435,8 +3411,8 @@
         "updateContext": null
       },
       "value": "_id",
-      "start": 242,
-      "end": 247,
+      "start": 249,
+      "end": 254,
       "loc": {
         "start": {
           "line": 11,
@@ -2461,8 +3437,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 247,
-      "end": 248,
+      "start": 254,
+      "end": 255,
       "loc": {
         "start": {
           "line": 11,
@@ -2487,6 +3463,158 @@
         "binop": null
       },
       "value": "authenticate",
+      "start": 260,
+      "end": 272,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 4
+        },
+        "end": {
+          "line": 12,
+          "column": 16
+        }
+      }
+    },
+    {
+>>>>>>> newFormio
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+<<<<<<< HEAD
+      "start": 240,
+      "end": 241,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 17
+        },
+        "end": {
+          "line": 11,
+          "column": 18
+=======
+      "start": 272,
+      "end": 273,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 16
+        },
+        "end": {
+          "line": 12,
+          "column": 17
+>>>>>>> newFormio
+        }
+      }
+    },
+    {
+      "type": {
+<<<<<<< HEAD
+        "label": "string",
+=======
+        "label": "true",
+        "keyword": "true",
+>>>>>>> newFormio
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+<<<<<<< HEAD
+      "value": "_id",
+      "start": 242,
+      "end": 247,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 19
+        },
+        "end": {
+          "line": 11,
+          "column": 24
+=======
+      "value": "true",
+      "start": 274,
+      "end": 278,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 18
+        },
+        "end": {
+          "line": 12,
+          "column": 22
+>>>>>>> newFormio
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+<<<<<<< HEAD
+      "start": 247,
+      "end": 248,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 24
+        },
+        "end": {
+          "line": 11,
+          "column": 25
+=======
+      "start": 278,
+      "end": 279,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 22
+        },
+        "end": {
+          "line": 12,
+          "column": 23
+>>>>>>> newFormio
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+<<<<<<< HEAD
+      "value": "authenticate",
       "start": 253,
       "end": 265,
       "loc": {
@@ -2497,6 +3625,19 @@
         "end": {
           "line": 12,
           "column": 16
+=======
+      "value": "label",
+      "start": 284,
+      "end": 289,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 4
+        },
+        "end": {
+          "line": 13,
+          "column": 9
+>>>>>>> newFormio
         }
       }
     },
@@ -2513,6 +3654,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 265,
       "end": 266,
       "loc": {
@@ -2523,13 +3665,29 @@
         "end": {
           "line": 12,
           "column": 17
+=======
+      "start": 289,
+      "end": 290,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 9
+        },
+        "end": {
+          "line": 13,
+          "column": 10
+>>>>>>> newFormio
         }
       }
     },
     {
       "type": {
+<<<<<<< HEAD
         "label": "true",
         "keyword": "true",
+=======
+        "label": "string",
+>>>>>>> newFormio
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -2540,6 +3698,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "value": "true",
       "start": 267,
       "end": 271,
@@ -2551,6 +3710,19 @@
         "end": {
           "line": 12,
           "column": 22
+=======
+      "value": "Form",
+      "start": 291,
+      "end": 297,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 11
+        },
+        "end": {
+          "line": 13,
+          "column": 17
+>>>>>>> newFormio
         }
       }
     },
@@ -2567,6 +3739,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 271,
       "end": 272,
       "loc": {
@@ -2577,6 +3750,18 @@
         "end": {
           "line": 12,
           "column": 23
+=======
+      "start": 297,
+      "end": 298,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 17
+        },
+        "end": {
+          "line": 13,
+          "column": 18
+>>>>>>> newFormio
         }
       }
     },
@@ -2592,6 +3777,7 @@
         "postfix": false,
         "binop": null
       },
+<<<<<<< HEAD
       "value": "label",
       "start": 277,
       "end": 282,
@@ -2603,6 +3789,19 @@
         "end": {
           "line": 13,
           "column": 9
+=======
+      "value": "key",
+      "start": 303,
+      "end": 306,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 14,
+          "column": 7
+>>>>>>> newFormio
         }
       }
     },
@@ -2619,6 +3818,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 282,
       "end": 283,
       "loc": {
@@ -2629,6 +3829,18 @@
         "end": {
           "line": 13,
           "column": 10
+=======
+      "start": 306,
+      "end": 307,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 7
+        },
+        "end": {
+          "line": 14,
+          "column": 8
+>>>>>>> newFormio
         }
       }
     },
@@ -2645,6 +3857,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "value": "Form",
       "start": 284,
       "end": 290,
@@ -2656,6 +3869,19 @@
         "end": {
           "line": 13,
           "column": 17
+=======
+      "value": "form",
+      "start": 308,
+      "end": 314,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 9
+        },
+        "end": {
+          "line": 14,
+          "column": 15
+>>>>>>> newFormio
         }
       }
     },
@@ -2672,6 +3898,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 290,
       "end": 291,
       "loc": {
@@ -2682,6 +3909,18 @@
         "end": {
           "line": 13,
           "column": 18
+=======
+      "start": 314,
+      "end": 315,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 15
+        },
+        "end": {
+          "line": 14,
+          "column": 16
+>>>>>>> newFormio
         }
       }
     },
@@ -2697,6 +3936,7 @@
         "postfix": false,
         "binop": null
       },
+<<<<<<< HEAD
       "value": "key",
       "start": 296,
       "end": 299,
@@ -2708,6 +3948,19 @@
         "end": {
           "line": 14,
           "column": 7
+=======
+      "value": "weight",
+      "start": 320,
+      "end": 326,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 10
+>>>>>>> newFormio
         }
       }
     },
@@ -2724,6 +3977,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 299,
       "end": 300,
       "loc": {
@@ -2734,103 +3988,9 @@
         "end": {
           "line": 14,
           "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "string",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "form",
-      "start": 301,
-      "end": 307,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 9
-        },
-        "end": {
-          "line": 14,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 307,
-      "end": 308,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 15
-        },
-        "end": {
-          "line": 14,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "weight",
-      "start": 313,
-      "end": 319,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 4
-        },
-        "end": {
-          "line": 15,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 319,
-      "end": 320,
+=======
+      "start": 326,
+      "end": 327,
       "loc": {
         "start": {
           "line": 15,
@@ -2839,6 +3999,7 @@
         "end": {
           "line": 15,
           "column": 11
+>>>>>>> newFormio
         }
       }
     },
@@ -2855,9 +4016,22 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
+      "value": "form",
+      "start": 301,
+      "end": 307,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 9
+        },
+        "end": {
+          "line": 14,
+          "column": 15
+=======
       "value": 10,
-      "start": 321,
-      "end": 323,
+      "start": 328,
+      "end": 330,
       "loc": {
         "start": {
           "line": 15,
@@ -2866,6 +4040,7 @@
         "end": {
           "line": 15,
           "column": 14
+>>>>>>> newFormio
         }
       }
     },
@@ -2882,6 +4057,171 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
+      "start": 307,
+      "end": 308,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 15
+        },
+        "end": {
+          "line": 14,
+          "column": 16
+=======
+      "start": 330,
+      "end": 331,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 14
+        },
+        "end": {
+          "line": 15,
+          "column": 15
+>>>>>>> newFormio
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+<<<<<<< HEAD
+      "value": "weight",
+      "start": 313,
+      "end": 319,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 4
+        },
+        "end": {
+          "line": 15,
+          "column": 10
+=======
+      "value": "lazyLoad",
+      "start": 336,
+      "end": 344,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 4
+        },
+        "end": {
+          "line": 16,
+          "column": 12
+>>>>>>> newFormio
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+<<<<<<< HEAD
+      "start": 319,
+      "end": 320,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 10
+        },
+        "end": {
+          "line": 15,
+          "column": 11
+=======
+      "start": 344,
+      "end": 345,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 12
+        },
+        "end": {
+          "line": 16,
+          "column": 13
+>>>>>>> newFormio
+        }
+      }
+    },
+    {
+      "type": {
+<<<<<<< HEAD
+        "label": "num",
+=======
+        "label": "false",
+        "keyword": "false",
+>>>>>>> newFormio
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+<<<<<<< HEAD
+      "value": 10,
+      "start": 321,
+      "end": 323,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 12
+        },
+        "end": {
+          "line": 15,
+          "column": 14
+=======
+      "value": "false",
+      "start": 346,
+      "end": 351,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 14
+        },
+        "end": {
+          "line": 16,
+          "column": 19
+>>>>>>> newFormio
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+<<<<<<< HEAD
       "start": 323,
       "end": 324,
       "loc": {
@@ -2892,6 +4232,18 @@
         "end": {
           "line": 15,
           "column": 15
+=======
+      "start": 351,
+      "end": 352,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 19
+        },
+        "end": {
+          "line": 16,
+          "column": 20
+>>>>>>> newFormio
         }
       }
     },
@@ -2908,6 +4260,7 @@
         "binop": null
       },
       "value": "tooltip",
+<<<<<<< HEAD
       "start": 329,
       "end": 336,
       "loc": {
@@ -2917,6 +4270,17 @@
         },
         "end": {
           "line": 16,
+=======
+      "start": 357,
+      "end": 364,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+>>>>>>> newFormio
           "column": 11
         }
       }
@@ -2934,6 +4298,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 336,
       "end": 337,
       "loc": {
@@ -2943,6 +4308,17 @@
         },
         "end": {
           "line": 16,
+=======
+      "start": 364,
+      "end": 365,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 11
+        },
+        "end": {
+          "line": 17,
+>>>>>>> newFormio
           "column": 12
         }
       }
@@ -2961,6 +4337,7 @@
         "updateContext": null
       },
       "value": "The form to load within this form component.",
+<<<<<<< HEAD
       "start": 338,
       "end": 384,
       "loc": {
@@ -2970,6 +4347,17 @@
         },
         "end": {
           "line": 16,
+=======
+      "start": 366,
+      "end": 412,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 13
+        },
+        "end": {
+          "line": 17,
+>>>>>>> newFormio
           "column": 59
         }
       }
@@ -2986,6 +4374,7 @@
         "postfix": false,
         "binop": null
       },
+<<<<<<< HEAD
       "start": 387,
       "end": 388,
       "loc": {
@@ -2995,6 +4384,17 @@
         },
         "end": {
           "line": 17,
+=======
+      "start": 415,
+      "end": 416,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+>>>>>>> newFormio
           "column": 3
         }
       }
@@ -3012,6 +4412,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 388,
       "end": 389,
       "loc": {
@@ -3021,6 +4422,17 @@
         },
         "end": {
           "line": 17,
+=======
+      "start": 416,
+      "end": 417,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 3
+        },
+        "end": {
+          "line": 18,
+>>>>>>> newFormio
           "column": 4
         }
       }
@@ -3037,6 +4449,7 @@
         "postfix": false,
         "binop": null
       },
+<<<<<<< HEAD
       "start": 392,
       "end": 393,
       "loc": {
@@ -3046,6 +4459,17 @@
         },
         "end": {
           "line": 18,
+=======
+      "start": 420,
+      "end": 421,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+>>>>>>> newFormio
           "column": 3
         }
       }
@@ -3063,6 +4487,7 @@
         "binop": null
       },
       "value": "type",
+<<<<<<< HEAD
       "start": 398,
       "end": 402,
       "loc": {
@@ -3072,6 +4497,17 @@
         },
         "end": {
           "line": 19,
+=======
+      "start": 426,
+      "end": 430,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+>>>>>>> newFormio
           "column": 8
         }
       }
@@ -3089,6 +4525,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 402,
       "end": 403,
       "loc": {
@@ -3098,6 +4535,17 @@
         },
         "end": {
           "line": 19,
+=======
+      "start": 430,
+      "end": 431,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 8
+        },
+        "end": {
+          "line": 20,
+>>>>>>> newFormio
           "column": 9
         }
       }
@@ -3116,6 +4564,7 @@
         "updateContext": null
       },
       "value": "textfield",
+<<<<<<< HEAD
       "start": 404,
       "end": 415,
       "loc": {
@@ -3125,6 +4574,17 @@
         },
         "end": {
           "line": 19,
+=======
+      "start": 432,
+      "end": 443,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 10
+        },
+        "end": {
+          "line": 20,
+>>>>>>> newFormio
           "column": 21
         }
       }
@@ -3142,6 +4602,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 415,
       "end": 416,
       "loc": {
@@ -3151,6 +4612,17 @@
         },
         "end": {
           "line": 19,
+=======
+      "start": 443,
+      "end": 444,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 21
+        },
+        "end": {
+          "line": 20,
+>>>>>>> newFormio
           "column": 22
         }
       }
@@ -3168,6 +4640,7 @@
         "binop": null
       },
       "value": "input",
+<<<<<<< HEAD
       "start": 421,
       "end": 426,
       "loc": {
@@ -3177,6 +4650,17 @@
         },
         "end": {
           "line": 20,
+=======
+      "start": 449,
+      "end": 454,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 4
+        },
+        "end": {
+          "line": 21,
+>>>>>>> newFormio
           "column": 9
         }
       }
@@ -3194,6 +4678,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 426,
       "end": 427,
       "loc": {
@@ -3203,6 +4688,17 @@
         },
         "end": {
           "line": 20,
+=======
+      "start": 454,
+      "end": 455,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 9
+        },
+        "end": {
+          "line": 21,
+>>>>>>> newFormio
           "column": 10
         }
       }
@@ -3222,6 +4718,7 @@
         "updateContext": null
       },
       "value": "true",
+<<<<<<< HEAD
       "start": 428,
       "end": 432,
       "loc": {
@@ -3231,6 +4728,17 @@
         },
         "end": {
           "line": 20,
+=======
+      "start": 456,
+      "end": 460,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 11
+        },
+        "end": {
+          "line": 21,
+>>>>>>> newFormio
           "column": 15
         }
       }
@@ -3248,6 +4756,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 432,
       "end": 433,
       "loc": {
@@ -3257,6 +4766,17 @@
         },
         "end": {
           "line": 20,
+=======
+      "start": 460,
+      "end": 461,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 15
+        },
+        "end": {
+          "line": 21,
+>>>>>>> newFormio
           "column": 16
         }
       }
@@ -3274,6 +4794,7 @@
         "binop": null
       },
       "value": "label",
+<<<<<<< HEAD
       "start": 438,
       "end": 443,
       "loc": {
@@ -3283,6 +4804,17 @@
         },
         "end": {
           "line": 21,
+=======
+      "start": 466,
+      "end": 471,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 4
+        },
+        "end": {
+          "line": 22,
+>>>>>>> newFormio
           "column": 9
         }
       }
@@ -3300,6 +4832,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 443,
       "end": 444,
       "loc": {
@@ -3309,6 +4842,17 @@
         },
         "end": {
           "line": 21,
+=======
+      "start": 471,
+      "end": 472,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 9
+        },
+        "end": {
+          "line": 22,
+>>>>>>> newFormio
           "column": 10
         }
       }
@@ -3327,6 +4871,7 @@
         "updateContext": null
       },
       "value": "Form Revision",
+<<<<<<< HEAD
       "start": 445,
       "end": 460,
       "loc": {
@@ -3336,6 +4881,17 @@
         },
         "end": {
           "line": 21,
+=======
+      "start": 473,
+      "end": 488,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 11
+        },
+        "end": {
+          "line": 22,
+>>>>>>> newFormio
           "column": 26
         }
       }
@@ -3353,6 +4909,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 460,
       "end": 461,
       "loc": {
@@ -3362,6 +4919,17 @@
         },
         "end": {
           "line": 21,
+=======
+      "start": 488,
+      "end": 489,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 26
+        },
+        "end": {
+          "line": 22,
+>>>>>>> newFormio
           "column": 27
         }
       }
@@ -3379,6 +4947,7 @@
         "binop": null
       },
       "value": "placeholder",
+<<<<<<< HEAD
       "start": 466,
       "end": 477,
       "loc": {
@@ -3388,6 +4957,17 @@
         },
         "end": {
           "line": 22,
+=======
+      "start": 494,
+      "end": 505,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 4
+        },
+        "end": {
+          "line": 23,
+>>>>>>> newFormio
           "column": 15
         }
       }
@@ -3405,6 +4985,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 477,
       "end": 478,
       "loc": {
@@ -3414,6 +4995,17 @@
         },
         "end": {
           "line": 22,
+=======
+      "start": 505,
+      "end": 506,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 15
+        },
+        "end": {
+          "line": 23,
+>>>>>>> newFormio
           "column": 16
         }
       }
@@ -3432,6 +5024,7 @@
         "updateContext": null
       },
       "value": "Current",
+<<<<<<< HEAD
       "start": 479,
       "end": 488,
       "loc": {
@@ -3441,6 +5034,17 @@
         },
         "end": {
           "line": 22,
+=======
+      "start": 507,
+      "end": 516,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 17
+        },
+        "end": {
+          "line": 23,
+>>>>>>> newFormio
           "column": 26
         }
       }
@@ -3458,6 +5062,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 488,
       "end": 489,
       "loc": {
@@ -3467,6 +5072,17 @@
         },
         "end": {
           "line": 22,
+=======
+      "start": 516,
+      "end": 517,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 26
+        },
+        "end": {
+          "line": 23,
+>>>>>>> newFormio
           "column": 27
         }
       }
@@ -3484,6 +5100,7 @@
         "binop": null
       },
       "value": "tooltip",
+<<<<<<< HEAD
       "start": 494,
       "end": 501,
       "loc": {
@@ -3493,6 +5110,17 @@
         },
         "end": {
           "line": 23,
+=======
+      "start": 522,
+      "end": 529,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+>>>>>>> newFormio
           "column": 11
         }
       }
@@ -3510,6 +5138,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 501,
       "end": 502,
       "loc": {
@@ -3519,6 +5148,17 @@
         },
         "end": {
           "line": 23,
+=======
+      "start": 529,
+      "end": 530,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 11
+        },
+        "end": {
+          "line": 24,
+>>>>>>> newFormio
           "column": 12
         }
       }
@@ -3537,6 +5177,7 @@
         "updateContext": null
       },
       "value": "You can lock the nested form to a specific revision by entering the revision number here.",
+<<<<<<< HEAD
       "start": 503,
       "end": 594,
       "loc": {
@@ -3546,6 +5187,17 @@
         },
         "end": {
           "line": 23,
+=======
+      "start": 531,
+      "end": 622,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 13
+        },
+        "end": {
+          "line": 24,
+>>>>>>> newFormio
           "column": 104
         }
       }
@@ -3563,6 +5215,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 594,
       "end": 595,
       "loc": {
@@ -3572,6 +5225,17 @@
         },
         "end": {
           "line": 23,
+=======
+      "start": 622,
+      "end": 623,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 104
+        },
+        "end": {
+          "line": 24,
+>>>>>>> newFormio
           "column": 105
         }
       }
@@ -3589,6 +5253,7 @@
         "binop": null
       },
       "value": "key",
+<<<<<<< HEAD
       "start": 600,
       "end": 603,
       "loc": {
@@ -3598,6 +5263,17 @@
         },
         "end": {
           "line": 24,
+=======
+      "start": 628,
+      "end": 631,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+>>>>>>> newFormio
           "column": 7
         }
       }
@@ -3615,6 +5291,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 603,
       "end": 604,
       "loc": {
@@ -3624,6 +5301,17 @@
         },
         "end": {
           "line": 24,
+=======
+      "start": 631,
+      "end": 632,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 7
+        },
+        "end": {
+          "line": 25,
+>>>>>>> newFormio
           "column": 8
         }
       }
@@ -3642,6 +5330,7 @@
         "updateContext": null
       },
       "value": "formRevision",
+<<<<<<< HEAD
       "start": 605,
       "end": 619,
       "loc": {
@@ -3651,6 +5340,17 @@
         },
         "end": {
           "line": 24,
+=======
+      "start": 633,
+      "end": 647,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 9
+        },
+        "end": {
+          "line": 25,
+>>>>>>> newFormio
           "column": 23
         }
       }
@@ -3668,6 +5368,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 619,
       "end": 620,
       "loc": {
@@ -3677,6 +5378,17 @@
         },
         "end": {
           "line": 24,
+=======
+      "start": 647,
+      "end": 648,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 23
+        },
+        "end": {
+          "line": 25,
+>>>>>>> newFormio
           "column": 24
         }
       }
@@ -3694,6 +5406,7 @@
         "binop": null
       },
       "value": "weight",
+<<<<<<< HEAD
       "start": 625,
       "end": 631,
       "loc": {
@@ -3703,6 +5416,17 @@
         },
         "end": {
           "line": 25,
+=======
+      "start": 653,
+      "end": 659,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+>>>>>>> newFormio
           "column": 10
         }
       }
@@ -3720,6 +5444,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 631,
       "end": 632,
       "loc": {
@@ -3729,6 +5454,17 @@
         },
         "end": {
           "line": 25,
+=======
+      "start": 659,
+      "end": 660,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 10
+        },
+        "end": {
+          "line": 26,
+>>>>>>> newFormio
           "column": 11
         }
       }
@@ -3747,6 +5483,7 @@
         "updateContext": null
       },
       "value": 11,
+<<<<<<< HEAD
       "start": 633,
       "end": 635,
       "loc": {
@@ -3756,6 +5493,17 @@
         },
         "end": {
           "line": 25,
+=======
+      "start": 661,
+      "end": 663,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 12
+        },
+        "end": {
+          "line": 26,
+>>>>>>> newFormio
           "column": 14
         }
       }
@@ -3773,6 +5521,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 635,
       "end": 636,
       "loc": {
@@ -3782,6 +5531,17 @@
         },
         "end": {
           "line": 25,
+=======
+      "start": 663,
+      "end": 664,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 14
+        },
+        "end": {
+          "line": 26,
+>>>>>>> newFormio
           "column": 15
         }
       }
@@ -3798,6 +5558,7 @@
         "postfix": false,
         "binop": null
       },
+<<<<<<< HEAD
       "start": 639,
       "end": 640,
       "loc": {
@@ -3807,6 +5568,17 @@
         },
         "end": {
           "line": 26,
+=======
+      "start": 667,
+      "end": 668,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 2
+        },
+        "end": {
+          "line": 27,
+>>>>>>> newFormio
           "column": 3
         }
       }
@@ -3824,6 +5596,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 640,
       "end": 641,
       "loc": {
@@ -3833,6 +5606,17 @@
         },
         "end": {
           "line": 26,
+=======
+      "start": 668,
+      "end": 669,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 3
+        },
+        "end": {
+          "line": 27,
+>>>>>>> newFormio
           "column": 4
         }
       }
@@ -3849,6 +5633,7 @@
         "postfix": false,
         "binop": null
       },
+<<<<<<< HEAD
       "start": 644,
       "end": 645,
       "loc": {
@@ -3858,6 +5643,17 @@
         },
         "end": {
           "line": 27,
+=======
+      "start": 672,
+      "end": 673,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 28,
+>>>>>>> newFormio
           "column": 3
         }
       }
@@ -3875,6 +5671,7 @@
         "binop": null
       },
       "value": "type",
+<<<<<<< HEAD
       "start": 650,
       "end": 654,
       "loc": {
@@ -3884,6 +5681,17 @@
         },
         "end": {
           "line": 28,
+=======
+      "start": 678,
+      "end": 682,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 4
+        },
+        "end": {
+          "line": 29,
+>>>>>>> newFormio
           "column": 8
         }
       }
@@ -3901,6 +5709,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 654,
       "end": 655,
       "loc": {
@@ -3910,6 +5719,17 @@
         },
         "end": {
           "line": 28,
+=======
+      "start": 682,
+      "end": 683,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 8
+        },
+        "end": {
+          "line": 29,
+>>>>>>> newFormio
           "column": 9
         }
       }
@@ -3928,6 +5748,7 @@
         "updateContext": null
       },
       "value": "checkbox",
+<<<<<<< HEAD
       "start": 656,
       "end": 666,
       "loc": {
@@ -3937,6 +5758,17 @@
         },
         "end": {
           "line": 28,
+=======
+      "start": 684,
+      "end": 694,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 10
+        },
+        "end": {
+          "line": 29,
+>>>>>>> newFormio
           "column": 20
         }
       }
@@ -3954,6 +5786,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 666,
       "end": 667,
       "loc": {
@@ -3963,6 +5796,17 @@
         },
         "end": {
           "line": 28,
+=======
+      "start": 694,
+      "end": 695,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 20
+        },
+        "end": {
+          "line": 29,
+>>>>>>> newFormio
           "column": 21
         }
       }
@@ -3980,6 +5824,7 @@
         "binop": null
       },
       "value": "input",
+<<<<<<< HEAD
       "start": 672,
       "end": 677,
       "loc": {
@@ -3989,6 +5834,17 @@
         },
         "end": {
           "line": 29,
+=======
+      "start": 700,
+      "end": 705,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 4
+        },
+        "end": {
+          "line": 30,
+>>>>>>> newFormio
           "column": 9
         }
       }
@@ -4006,6 +5862,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 677,
       "end": 678,
       "loc": {
@@ -4015,6 +5872,17 @@
         },
         "end": {
           "line": 29,
+=======
+      "start": 705,
+      "end": 706,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 9
+        },
+        "end": {
+          "line": 30,
+>>>>>>> newFormio
           "column": 10
         }
       }
@@ -4034,6 +5902,7 @@
         "updateContext": null
       },
       "value": "true",
+<<<<<<< HEAD
       "start": 679,
       "end": 683,
       "loc": {
@@ -4043,6 +5912,17 @@
         },
         "end": {
           "line": 29,
+=======
+      "start": 707,
+      "end": 711,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 11
+        },
+        "end": {
+          "line": 30,
+>>>>>>> newFormio
           "column": 15
         }
       }
@@ -4060,6 +5940,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 683,
       "end": 684,
       "loc": {
@@ -4069,6 +5950,17 @@
         },
         "end": {
           "line": 29,
+=======
+      "start": 711,
+      "end": 712,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 15
+        },
+        "end": {
+          "line": 30,
+>>>>>>> newFormio
           "column": 16
         }
       }
@@ -4086,6 +5978,7 @@
         "binop": null
       },
       "value": "weight",
+<<<<<<< HEAD
       "start": 689,
       "end": 695,
       "loc": {
@@ -4095,6 +5988,17 @@
         },
         "end": {
           "line": 30,
+=======
+      "start": 717,
+      "end": 723,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 4
+        },
+        "end": {
+          "line": 31,
+>>>>>>> newFormio
           "column": 10
         }
       }
@@ -4112,6 +6016,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 695,
       "end": 696,
       "loc": {
@@ -4121,6 +6026,17 @@
         },
         "end": {
           "line": 30,
+=======
+      "start": 723,
+      "end": 724,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 10
+        },
+        "end": {
+          "line": 31,
+>>>>>>> newFormio
           "column": 11
         }
       }
@@ -4139,6 +6055,7 @@
         "updateContext": null
       },
       "value": 20,
+<<<<<<< HEAD
       "start": 697,
       "end": 699,
       "loc": {
@@ -4148,6 +6065,17 @@
         },
         "end": {
           "line": 30,
+=======
+      "start": 725,
+      "end": 727,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 12
+        },
+        "end": {
+          "line": 31,
+>>>>>>> newFormio
           "column": 14
         }
       }
@@ -4165,6 +6093,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 699,
       "end": 700,
       "loc": {
@@ -4174,6 +6103,17 @@
         },
         "end": {
           "line": 30,
+=======
+      "start": 727,
+      "end": 728,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 14
+        },
+        "end": {
+          "line": 31,
+>>>>>>> newFormio
           "column": 15
         }
       }
@@ -4191,6 +6131,7 @@
         "binop": null
       },
       "value": "key",
+<<<<<<< HEAD
       "start": 705,
       "end": 708,
       "loc": {
@@ -4200,6 +6141,17 @@
         },
         "end": {
           "line": 31,
+=======
+      "start": 733,
+      "end": 736,
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 4
+        },
+        "end": {
+          "line": 32,
+>>>>>>> newFormio
           "column": 7
         }
       }
@@ -4217,6 +6169,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 708,
       "end": 709,
       "loc": {
@@ -4226,6 +6179,17 @@
         },
         "end": {
           "line": 31,
+=======
+      "start": 736,
+      "end": 737,
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 7
+        },
+        "end": {
+          "line": 32,
+>>>>>>> newFormio
           "column": 8
         }
       }
@@ -4244,6 +6208,7 @@
         "updateContext": null
       },
       "value": "reference",
+<<<<<<< HEAD
       "start": 710,
       "end": 721,
       "loc": {
@@ -4253,6 +6218,17 @@
         },
         "end": {
           "line": 31,
+=======
+      "start": 738,
+      "end": 749,
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 9
+        },
+        "end": {
+          "line": 32,
+>>>>>>> newFormio
           "column": 20
         }
       }
@@ -4270,6 +6246,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 721,
       "end": 722,
       "loc": {
@@ -4279,6 +6256,17 @@
         },
         "end": {
           "line": 31,
+=======
+      "start": 749,
+      "end": 750,
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 20
+        },
+        "end": {
+          "line": 32,
+>>>>>>> newFormio
           "column": 21
         }
       }
@@ -4296,6 +6284,7 @@
         "binop": null
       },
       "value": "label",
+<<<<<<< HEAD
       "start": 727,
       "end": 732,
       "loc": {
@@ -4305,6 +6294,17 @@
         },
         "end": {
           "line": 32,
+=======
+      "start": 755,
+      "end": 760,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 4
+        },
+        "end": {
+          "line": 33,
+>>>>>>> newFormio
           "column": 9
         }
       }
@@ -4322,6 +6322,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 732,
       "end": 733,
       "loc": {
@@ -4331,6 +6332,17 @@
         },
         "end": {
           "line": 32,
+=======
+      "start": 760,
+      "end": 761,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 9
+        },
+        "end": {
+          "line": 33,
+>>>>>>> newFormio
           "column": 10
         }
       }
@@ -4349,6 +6361,7 @@
         "updateContext": null
       },
       "value": "Save as reference",
+<<<<<<< HEAD
       "start": 734,
       "end": 753,
       "loc": {
@@ -4358,6 +6371,17 @@
         },
         "end": {
           "line": 32,
+=======
+      "start": 762,
+      "end": 781,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 11
+        },
+        "end": {
+          "line": 33,
+>>>>>>> newFormio
           "column": 30
         }
       }
@@ -4375,6 +6399,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 753,
       "end": 754,
       "loc": {
@@ -4384,6 +6409,17 @@
         },
         "end": {
           "line": 32,
+=======
+      "start": 781,
+      "end": 782,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 30
+        },
+        "end": {
+          "line": 33,
+>>>>>>> newFormio
           "column": 31
         }
       }
@@ -4401,6 +6437,7 @@
         "binop": null
       },
       "value": "tooltip",
+<<<<<<< HEAD
       "start": 759,
       "end": 766,
       "loc": {
@@ -4410,6 +6447,17 @@
         },
         "end": {
           "line": 33,
+=======
+      "start": 787,
+      "end": 794,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 4
+        },
+        "end": {
+          "line": 34,
+>>>>>>> newFormio
           "column": 11
         }
       }
@@ -4427,6 +6475,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 766,
       "end": 767,
       "loc": {
@@ -4436,6 +6485,17 @@
         },
         "end": {
           "line": 33,
+=======
+      "start": 794,
+      "end": 795,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 11
+        },
+        "end": {
+          "line": 34,
+>>>>>>> newFormio
           "column": 12
         }
       }
@@ -4454,6 +6514,7 @@
         "updateContext": null
       },
       "value": "Using this option will save this field as a reference and link its value to the value of the origin record.",
+<<<<<<< HEAD
       "start": 768,
       "end": 877,
       "loc": {
@@ -4463,6 +6524,17 @@
         },
         "end": {
           "line": 33,
+=======
+      "start": 796,
+      "end": 905,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 13
+        },
+        "end": {
+          "line": 34,
+>>>>>>> newFormio
           "column": 122
         }
       }
@@ -4479,6 +6551,7 @@
         "postfix": false,
         "binop": null
       },
+<<<<<<< HEAD
       "start": 880,
       "end": 881,
       "loc": {
@@ -4488,6 +6561,17 @@
         },
         "end": {
           "line": 34,
+=======
+      "start": 908,
+      "end": 909,
+      "loc": {
+        "start": {
+          "line": 35,
+          "column": 2
+        },
+        "end": {
+          "line": 35,
+>>>>>>> newFormio
           "column": 3
         }
       }
@@ -4505,6 +6589,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 882,
       "end": 883,
       "loc": {
@@ -4514,6 +6599,17 @@
         },
         "end": {
           "line": 35,
+=======
+      "start": 910,
+      "end": 911,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 0
+        },
+        "end": {
+          "line": 36,
+>>>>>>> newFormio
           "column": 1
         }
       }
@@ -4531,6 +6627,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 883,
       "end": 884,
       "loc": {
@@ -4540,6 +6637,17 @@
         },
         "end": {
           "line": 35,
+=======
+      "start": 911,
+      "end": 912,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 1
+        },
+        "end": {
+          "line": 36,
+>>>>>>> newFormio
           "column": 2
         }
       }
@@ -4557,6 +6665,7 @@
         "binop": null,
         "updateContext": null
       },
+<<<<<<< HEAD
       "start": 885,
       "end": 885,
       "loc": {
@@ -4566,6 +6675,17 @@
         },
         "end": {
           "line": 36,
+=======
+      "start": 913,
+      "end": 913,
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 0
+        },
+        "end": {
+          "line": 37,
+>>>>>>> newFormio
           "column": 0
         }
       }

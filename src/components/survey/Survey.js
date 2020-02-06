@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -50,6 +51,33 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+=======
+import _ from 'lodash';
+import Field from '../_classes/field/Field';
+import { boolValue } from '../../utils/utils';
+
+export default class SurveyComponent extends Field {
+  static schema(...extend) {
+    return Field.schema({
+      type: 'survey',
+      label: 'Survey',
+      key: 'survey',
+      questions: [],
+      values: []
+    }, ...extend);
+  }
+
+  static get builderInfo() {
+    return {
+      title: 'Survey',
+      group: 'advanced',
+      icon: 'list',
+      weight: 110,
+      documentation: 'http://help.form.io/userguide/#survey',
+      schema: SurveyComponent.schema()
+    };
+  }
+>>>>>>> newFormio
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
@@ -64,6 +92,7 @@ function (_BaseComponent) {
     return _possibleConstructorReturn(this, _getPrototypeOf(SurveyComponent).apply(this, arguments));
   }
 
+<<<<<<< HEAD
   _createClass(SurveyComponent, [{
     key: "build",
     value: function build() {
@@ -154,9 +183,48 @@ function (_BaseComponent) {
     key: "setValue",
     value: function setValue(value, flags) {
       var _this2 = this;
+=======
+  render() {
+    return super.render(this.renderTemplate('survey'));
+  }
+
+  attach(element) {
+    this.loadRefs(element, { input: 'multiple' });
+    const superAttach = super.attach(element);
+    this.refs.input.forEach((input) => {
+      if (this.disabled) {
+        input.setAttribute('disabled', 'disabled');
+      }
+      else {
+        this.addEventListener(input, 'change', () => this.updateValue(null, {
+          modified: true
+        }));
+      }
+    });
+    this.setValue(this.dataValue);
+    return superAttach;
+  }
+
+  setValue(value, flags) {
+    flags = flags || {};
+    if (!value) {
+      return false;
+    }
+
+    _.each(this.component.questions, (question) => {
+      _.each(this.refs.input, (input) => {
+        if (input.name === this.getInputName(question)) {
+          input.checked = (input.value === value[question.value]);
+        }
+      });
+    });
+    return this.updateValue(value, flags);
+  }
+>>>>>>> newFormio
 
       flags = this.getFlags.apply(this, arguments);
 
+<<<<<<< HEAD
       if (!value) {
         return;
       }
@@ -189,9 +257,39 @@ function (_BaseComponent) {
             return false;
           }
         });
+=======
+  getValue() {
+    if (this.viewOnly || !this.refs.input || !this.refs.input.length) {
+      return this.dataValue;
+    }
+    const value = {};
+    _.each(this.component.questions, (question) => {
+      _.each(this.refs.input, (input) => {
+        if (input.checked && (input.name === this.getInputName(question))) {
+          value[question.value] = input.value;
+          return false;
+        }
+>>>>>>> newFormio
       });
 
+<<<<<<< HEAD
       return value;
+=======
+  set disabled(disabled) {
+    super.disabled = disabled;
+    _.each(this.refs.input, (input) => {
+      input.disabled = true;
+    });
+  }
+
+  get disabled() {
+    return super.disabled;
+  }
+
+  validateRequired(setting, value) {
+    if (!boolValue(setting)) {
+      return true;
+>>>>>>> newFormio
     }
   }, {
     key: "validateRequired",
@@ -200,6 +298,7 @@ function (_BaseComponent) {
         return true;
       }
 
+<<<<<<< HEAD
       return this.component.questions.reduce(function (result, question) {
         return result && Boolean(value[question.value]);
       }, true);
@@ -287,3 +386,9 @@ function (_BaseComponent) {
 }(_Base.default);
 
 exports.default = SurveyComponent;
+=======
+  getInputName(question) {
+    return `${this.options.name}[${question.value}]`;
+  }
+}
+>>>>>>> newFormio

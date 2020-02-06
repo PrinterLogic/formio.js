@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.symbol");
@@ -96,15 +97,34 @@ function (_EventEmitter) {
 
     var overloadHandler = function overloadHandler() {
       console.warn('Infinite loop detected');
+=======
+import { EventEmitter2 } from 'eventemitter2';
+import * as utils from './utils/utils';
+
+export default class EventEmitter extends EventEmitter2 {
+  constructor(conf = {}) {
+    const { loadLimit = 50, eventsSafeInterval = 300, pause = 500, ...ee2conf } = conf;
+    super(ee2conf);
+
+    const [isPaused, togglePause] = utils.withSwitch(false, true);
+
+    const overloadHandler = () => {
+      console.warn('Infinite loop detected', this.id, pause);
+>>>>>>> newFormio
       togglePause();
       setTimeout(togglePause, pause);
     };
 
+<<<<<<< HEAD
     var dispatch = utils.observeOverload(overloadHandler, {
+=======
+    const dispatch = utils.observeOverload(overloadHandler, {
+>>>>>>> newFormio
       limit: loadLimit,
       delay: eventsSafeInterval
     });
 
+<<<<<<< HEAD
     _this.emit = function () {
       var _get2;
 
@@ -112,10 +132,14 @@ function (_EventEmitter) {
         inspect();
       }
 
+=======
+    this.emit = (...args) => {
+>>>>>>> newFormio
       if (isPaused()) {
         return;
       }
 
+<<<<<<< HEAD
       for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
       }
@@ -132,3 +156,10 @@ function (_EventEmitter) {
 }(_eventemitter.EventEmitter2);
 
 exports.default = EventEmitter;
+=======
+      super.emit(...args);
+      dispatch();
+    };
+  }
+}
+>>>>>>> newFormio

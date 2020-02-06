@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -23,5 +24,21 @@ var _default = {
   s3: _s.default,
   url: _url.default,
   azure: _azure.default
+=======
+import base64 from './base64';
+import dropbox from './dropbox';
+import s3 from './s3';
+import azure from './azure';
+import url from './url';
+import indexeddb from './indexeddb';
+
+export default {
+  base64,
+  dropbox,
+  s3,
+  url,
+  azure,
+  indexeddb,
+>>>>>>> newFormio
 };
 exports.default = _default;

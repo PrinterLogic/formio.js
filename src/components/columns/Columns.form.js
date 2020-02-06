@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 require("core-js/modules/es.array.concat");
@@ -23,3 +24,17 @@ function _default() {
     components: _ColumnsEdit.default
   }]].concat(extend));
 }
+=======
+import nestedComponentForm from '../_classes/nested/NestedComponent.form';
+
+import ColumnsEditDisplay from './editForm/Columns.edit.display';
+
+export default function(...extend) {
+  return nestedComponentForm([
+    {
+      key: 'display',
+      components: ColumnsEditDisplay
+    }
+  ], ...extend);
+}
+>>>>>>> newFormio

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16,3 +17,11 @@ var _default = {
   calendar: _CalendarWidget.default
 };
 exports.default = _default;
+=======
+import InputWidget from './InputWidget';
+import CalendarWidget from './CalendarWidget';
+export default {
+  input: InputWidget,
+  calendar: CalendarWidget
+};
+>>>>>>> newFormio

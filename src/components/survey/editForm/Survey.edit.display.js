@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64,3 +65,11 @@ var _default = [{
   }]
 }];
 exports.default = _default;
+=======
+export default [
+  {
+    key: 'placeholder',
+    ignore: true
+  },
+];
+>>>>>>> newFormio
